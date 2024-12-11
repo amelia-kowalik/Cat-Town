@@ -50,14 +50,14 @@ TagManager:
   - name: Collision
     uniqueID: 2546542153
     locked: 0
+  - name: Decor
+    uniqueID: 835534819
+    locked: 0
   - name: Player
     uniqueID: 3416633689
     locked: 0
   - name: Walk behind
     uniqueID: 3711743837
-    locked: 0
-  - name: Decor
-    uniqueID: 835534819
     locked: 0
   m_RenderingLayers:
   - Default
