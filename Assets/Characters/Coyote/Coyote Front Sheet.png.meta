@@ -175,7 +175,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -213,7 +213,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1284,7 +1284,54 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Coyote Front Sheet_0: 7995236960253127549
+      Coyote Front Sheet_1: -3187727045975113866
+      Coyote Front Sheet_10: -1052172887042133388
+      Coyote Front Sheet_11: 4146037744933473660
+      Coyote Front Sheet_12: -1463956604071440872
+      Coyote Front Sheet_13: -5809924265628960713
+      Coyote Front Sheet_14: 5898067065492488529
+      Coyote Front Sheet_15: 6784314288497448797
+      Coyote Front Sheet_16: -760872573958814473
+      Coyote Front Sheet_17: 9048331881190155607
+      Coyote Front Sheet_18: -9136137889775329768
+      Coyote Front Sheet_19: 5423939064497629132
+      Coyote Front Sheet_2: -4221470260582313133
+      Coyote Front Sheet_20: -892929619092675582
+      Coyote Front Sheet_21: -3543117972557156105
+      Coyote Front Sheet_22: -6561478822236863496
+      Coyote Front Sheet_23: -5359006237095271163
+      Coyote Front Sheet_24: -2723335504827948543
+      Coyote Front Sheet_25: 1602042715952069713
+      Coyote Front Sheet_26: -1180932983496398610
+      Coyote Front Sheet_27: 236259161213820841
+      Coyote Front Sheet_28: 2630596387193656818
+      Coyote Front Sheet_29: 1595076422912801957
+      Coyote Front Sheet_3: -896401741630699898
+      Coyote Front Sheet_30: 826875255321631455
+      Coyote Front Sheet_31: -7006928686934559613
+      Coyote Front Sheet_32: -8203960798936171200
+      Coyote Front Sheet_33: -8224476889799089195
+      Coyote Front Sheet_34: 7524061800438564590
+      Coyote Front Sheet_35: -3559934048103926918
+      Coyote Front Sheet_36: 7588645324003356012
+      Coyote Front Sheet_37: -5908945093807011884
+      Coyote Front Sheet_38: -7787311038705699
+      Coyote Front Sheet_39: 6266543657455379715
+      Coyote Front Sheet_4: 2358396511593657813
+      Coyote Front Sheet_40: -8055767399335867006
+      Coyote Front Sheet_41: -5618957531244834541
+      Coyote Front Sheet_42: 4060572743380971729
+      Coyote Front Sheet_43: -6377936669592533176
+      Coyote Front Sheet_44: 3243513157496463801
+      Coyote Front Sheet_45: -2190012620355700550
+      Coyote Front Sheet_46: 2684603152370887180
+      Coyote Front Sheet_5: 8346705440127534854
+      Coyote Front Sheet_6: 5633411305139355872
+      Coyote Front Sheet_7: -5517364857611704499
+      Coyote Front Sheet_8: 8850104234058639466
+      Coyote Front Sheet_9: -2561811241457772078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
