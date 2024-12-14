@@ -10,7 +10,7 @@
 
 **Gatunek** 
 
-➡️ Taktyczna gra typu Tower Defend
+➡️ Taktyczna gra typu Tower(Town) Defense
 
 **Liczba graczy** 
 
