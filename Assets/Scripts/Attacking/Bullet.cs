@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private int damage = 10;
     
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -12,7 +11,7 @@ public class Bullet : MonoBehaviour
             Cowboy player = other.gameObject.GetComponent<Cowboy>();
             if (player != null)
             {
-                player.TakeDamage(damage);
+                player.TakeDamage(gameObject.GetComponent<Coyote>().CoyoteDamage());
             }
         }
         
@@ -21,8 +20,13 @@ public class Bullet : MonoBehaviour
             Coyote enemy = other.gameObject.GetComponent<Coyote>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(gameObject.GetComponent<Cowboy>().CowboyDamage());
             }
+        }
+
+        if (other.gameObject.CompareTag("NPC"))
+        {
+            Debug.Log("Bullet hit a NPC");
         }
         
         Destroy(gameObject);

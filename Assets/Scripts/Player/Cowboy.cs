@@ -9,18 +9,32 @@ public class Cowboy : MonoBehaviour
         health -= damage;
     }
 
-    void Heal(int heal)
+    public void Heal(int heal)
     {
         health += heal;
     }
 
-    void Die()
+    public void CowboyDeath()
     {
         if (health <= 0)
         {
-            //
+            //gameover
         }
     }
+
+    public int CowboyDamage()
+    {
+        int randomDamage = Random.Range(10, 50);
+        if (randomDamage == 50)
+        {
+            Debug.Log("Critical Hit!!!");
+        }
+
+        return randomDamage;
+    }
+    
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

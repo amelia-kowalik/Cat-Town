@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Coyote : MonoBehaviour
 {
-    private int health = 10;
+    [SerializeField] private int health = 100;
 
     public void TakeDamage(int damage)
     {
@@ -18,6 +18,12 @@ public class Coyote : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public int CoyoteDamage()
+    {
+        int randomDamage = Random.Range(10, 20);
+        return randomDamage;
+    }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +34,7 @@ public class Coyote : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+
     }
 }
