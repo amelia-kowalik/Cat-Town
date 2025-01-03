@@ -1,37 +1,82 @@
 using System;
 using Unity.VisualScripting;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class CoyoteAttackingComponent : Shooting
 {
     [SerializeField]
-    private float fireRate = 2f;
-    private float fireCooldown = 1f;
+    private float fireRate = 1f;
+    private float fireCooldown = 0f;
+    float range = 3f;
+
+    public bool InRange(GameObject target)
+    {
+        float distance = CheckDistance(target);
+        Debug.Log($"Distance to target: {distance}");
+        return distance <= range;
+    }
+
+    public bool InSight(GameObject target)
+    {
+        float distance = CheckDistance(target);
+        Vector2 direction = (target.transform.position - transform.position).normalized;
+        
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction, distance);
+
+        foreach (var hit in hits)
+        {
+            if (hit.collider.gameObject == gameObject) continue;
+
+            SpriteRenderer objectSpriteRend = hit.collider.GetComponent<SpriteRenderer>();
+
+            if (objectSpriteRend != null)
+            {
+                string sortingLayer = objectSpriteRend.sortingLayerName;
+
+                if (sortingLayer == "Obstacles")
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
     
-    public void CoyoteShoot()
+    private float CheckDistance(GameObject target)
+    {
+            Vector2 selfPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            Vector2 targetPosition = new Vector2(target.transform.position.x, target.transform.position.y);
+            return Vector2.Distance(selfPosition, targetPosition);
+    }
+    
+    public void CoyoteShoot(GameObject target)
     {
         fireCooldown -= Time.deltaTime;
         
         if (fireCooldown <= 0f)
         {
+            facingDirection = (target.transform.position - transform.position).normalized;
+            Debug.Log("Shooting!");
             Shoot();
             fireCooldown = 1f / fireRate; 
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    /*private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("NPC"))
         {
             KidnapCat(other.gameObject);
         }
-    }
+    }*/
 
-    public void KidnapCat(GameObject npc)
+    /*public void KidnapCat(GameObject npc)
     {
         Debug.Log("Kidnap Cat");
         npc.SetActive(false);
-    }
+    }*/
     
     
 }

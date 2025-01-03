@@ -80423,6 +80423,8 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 5054279359321342227
   - rid: 5054279359321342519
+  m_IsInitialised: 0
+  m_IsStarted: 0
   references:
     version: 2
     RefIds:

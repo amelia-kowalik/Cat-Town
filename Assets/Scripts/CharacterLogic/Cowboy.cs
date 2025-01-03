@@ -1,29 +1,39 @@
 using UnityEngine;
 
-public class Coyote : MonoBehaviour
+public class Cowboy : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    private int health = 100;
 
     public void TakeDamage(int damage)
     {
         health -= damage;
+    }
 
+    public void Heal(int heal)
+    {
+        health += heal;
+    }
+
+    public void CowboyDeath()
+    {
         if (health <= 0)
         {
-            Die();
+            //gameover
         }
     }
 
-    private void Die()
+    public int GetCowboyDamage()
     {
-        Destroy(gameObject);
-    }
+        int randomDamage = Random.Range(10, 50);
+        if (randomDamage == 50)
+        {
+            Debug.Log("Critical Hit!!!");
+        }
 
-    public int CoyoteDamage()
-    {
-        int randomDamage = Random.Range(10, 20);
         return randomDamage;
     }
+    
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +44,6 @@ public class Coyote : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Euler(0, 0, 0);
-
+        
     }
 }

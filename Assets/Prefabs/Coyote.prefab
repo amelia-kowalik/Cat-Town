@@ -164,12 +164,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430695605417207354}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dee008e2051b49343b0b78d883330708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8212932519653517699, guid: 8d2190fe2a83f8946ade48588d8dc20d, type: 3}
+  fireRate: 2
 --- !u!114 &949293351280942458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb41aec9cfa9634f946cf500e6171f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 30
 --- !u!114 &-7594756386412310312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,9 +199,20 @@ MonoBehaviour:
   m_Graph: {fileID: 1905706278172989381, guid: 79254bddd0bbec948b9cd7c40394c6e5, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 5054279359321342824
+  - rid: 3795436153440568058
+  m_IsInitialised: 0
+  m_IsStarted: 0
   references:
     version: 2
     RefIds:
+    - rid: 3795436153440568058
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 3508016906383669386
+          m_Value1: 10365842438642643072
+        Name: Player
+        m_Value: {fileID: 0}
     - rid: 5054279359321342824
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
