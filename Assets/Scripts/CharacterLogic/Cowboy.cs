@@ -1,22 +1,42 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Cowboy : MonoBehaviour
 {
-    private int health = 100;
+    public Dictionary<string,float> Stats { get; set; }
+
+    public void Awake()
+    {
+        Stats = new Dictionary<string, float>()
+        {
+            { "health", 100f },
+            { "walkingSpeed", 2f },
+            { "baseDamage", 10f }
+        };
+    }
+
+    public void ApplyUpgrade(Upgrade upgrade)
+    {
+        if (upgrade.appliedTo == "Cowboy" && Stats.ContainsKey(upgrade.stat))
+        {
+            Stats[upgrade.stat] += upgrade.Amount;
+        }
+    }
+    
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        Stats["health"] -= damage;
     }
 
     public void Heal(int heal)
     {
-        health += heal;
+        Stats["health"] += heal;
     }
 
     public void CowboyDeath()
     {
-        if (health <= 0)
+        if (Stats["health"] <= 0)
         {
             //gameover
         }
@@ -35,15 +55,4 @@ public class Cowboy : MonoBehaviour
     
     
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
