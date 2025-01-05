@@ -10,7 +10,7 @@ public class Cowboy : MonoBehaviour
         Stats = new Dictionary<string, float>()
         {
             { "health", 100f },
-            { "walkingSpeed", 2f },
+            { "walkingSpeed", 3f },
             { "baseDamage", 10f }
         };
     }

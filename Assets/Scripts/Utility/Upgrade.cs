@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Upgrade
@@ -8,8 +9,10 @@ public class Upgrade
     public float baseLevel;
     public int currentLevel;
     public int maxLevel;
+    public int cost;
+    public Action upgradeAction;
 
-    public Upgrade(string upgradeName, string appliedTo, string stat, float baseLevel, int maxLevel)
+    public Upgrade(string upgradeName, string appliedTo, string stat, float baseLevel, int maxLevel, int cost)
     {
         this.upgradeName = upgradeName;
         this.appliedTo = appliedTo;
@@ -17,12 +20,13 @@ public class Upgrade
         this.baseLevel = baseLevel;
         this.currentLevel = 1;
         this.maxLevel = maxLevel;
+        this.cost = cost;
     }
 
     public float Amount{
         get
         {
-            return currentLevel * baseLevel;
+            return baseLevel * (currentLevel * 0.3f);
         }
     }
 
@@ -37,6 +41,11 @@ public class Upgrade
         {
             currentLevel++;
             Debug.Log($"Upgrade {upgradeName} leveled up to {currentLevel}!");
+
+            if (appliedTo == "Game")
+            {
+                upgradeAction?.Invoke();
+            }
         }
     }
     
