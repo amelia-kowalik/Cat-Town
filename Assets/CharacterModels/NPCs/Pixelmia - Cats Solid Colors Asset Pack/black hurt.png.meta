@@ -459,7 +459,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      black hurt_0: 6380967339196025948
+      black hurt_1: -4122183648930597758
+      black hurt_10: -1447060741880369506
+      black hurt_11: 6449690369136090955
+      black hurt_12: -2618936346155097732
+      black hurt_13: -2136064723005664057
+      black hurt_2: 1899752831048162037
+      black hurt_3: 6953821332075779580
+      black hurt_4: 4160046474282595043
+      black hurt_5: -7895483475008796924
+      black hurt_6: 4042374993829490872
+      black hurt_7: -665353232171792532
+      black hurt_8: 1609308391420718753
+      black hurt_9: -4987363646921803431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

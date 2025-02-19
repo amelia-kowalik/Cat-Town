@@ -534,7 +534,24 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Death Explosion_0: -9032449312102158466
+      Death Explosion_1: -3772401029764451252
+      Death Explosion_10: -4982592279354411417
+      Death Explosion_11: -2308955534438399691
+      Death Explosion_12: 5255258682262183572
+      Death Explosion_13: 6699976811186726021
+      Death Explosion_14: -450436144179901871
+      Death Explosion_15: -3592316161620504062
+      Death Explosion_16: 321370740866683002
+      Death Explosion_2: -2619335855604450060
+      Death Explosion_3: -8139654544492147254
+      Death Explosion_4: -6082770241226130275
+      Death Explosion_5: -3227834637364348604
+      Death Explosion_6: 8001929753269556935
+      Death Explosion_7: -32783998658802931
+      Death Explosion_8: 7837621574681780828
+      Death Explosion_9: 5917667560096754315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

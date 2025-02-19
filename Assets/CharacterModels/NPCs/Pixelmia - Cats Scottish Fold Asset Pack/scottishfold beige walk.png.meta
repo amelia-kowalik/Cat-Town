@@ -709,7 +709,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      scottishfold beige walk_0: -3433929629992425357
+      scottishfold beige walk_1: 747729766059691302
+      scottishfold beige walk_10: 6257654335856461526
+      scottishfold beige walk_11: -5952882222492576973
+      scottishfold beige walk_12: 3695242448762772783
+      scottishfold beige walk_13: 7672611570696608248
+      scottishfold beige walk_14: -2276054541537600817
+      scottishfold beige walk_15: 8963252324085003665
+      scottishfold beige walk_16: 6052003749984730525
+      scottishfold beige walk_17: 7273435252184977996
+      scottishfold beige walk_18: 493401349356353235
+      scottishfold beige walk_19: -5221844640022042076
+      scottishfold beige walk_2: 239959973994058990
+      scottishfold beige walk_20: 2798066471707585816
+      scottishfold beige walk_21: -4989956013093104221
+      scottishfold beige walk_22: -2529821655346264269
+      scottishfold beige walk_23: -3065319291010445893
+      scottishfold beige walk_3: -4694739365789176679
+      scottishfold beige walk_4: -1934321808903439932
+      scottishfold beige walk_5: 7826443644197488491
+      scottishfold beige walk_6: 2838436499844385686
+      scottishfold beige walk_7: 7157285948049597383
+      scottishfold beige walk_8: -6833208813283113556
+      scottishfold beige walk_9: -3241575106703351229
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    public Cowboy cowboy;
+    [SerializeField] private Cowboy cowboy;
+    [SerializeField] private GameObject[] snipers;
 
     public List<Upgrade> upgrades = new List<Upgrade>();
     
@@ -71,11 +72,11 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    private void TrainToDefend()
+    private void TrainNPCS()
     {
-        Upgrade selfDefend = upgrades.Find(x => x.upgradeName == "Self Defense");
+        Upgrade selfDefense = upgrades.Find(x => x.upgradeName == "Self Defense");
 
-        int chancesToPunch = selfDefend.currentLevel + 1;
+        int chancesToPunch = selfDefense.currentLevel + 1;
 
         NPC[] npcs = FindObjectsByType<NPC>(FindObjectsSortMode.None);
         foreach (var npc in npcs)
@@ -85,9 +86,14 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    private void TrainCatCowboy()
+    private void TrainSniper()
     {
-        
+        Upgrade catCowboys = upgrades.Find(x => x.upgradeName == "Cat Cowboys");
+
+        int sniperCount = catCowboys.currentLevel + 1;
+
+        snipers[sniperCount].SetActive(true);
+
     }
     
 }

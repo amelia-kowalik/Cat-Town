@@ -434,7 +434,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      black fight_0: -4309474067823673222
+      black fight_1: -4277747886372466216
+      black fight_10: 756762949256708337
+      black fight_11: 2395900301535993059
+      black fight_12: 8839333376149785062
+      black fight_2: -2969730846173051597
+      black fight_3: -7832487036104011718
+      black fight_4: 3459990191005527692
+      black fight_5: 2119664389559104642
+      black fight_6: 6118112076716530007
+      black fight_7: -1204322089503140746
+      black fight_8: 8275850549458716945
+      black fight_9: -1443583294016995297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
