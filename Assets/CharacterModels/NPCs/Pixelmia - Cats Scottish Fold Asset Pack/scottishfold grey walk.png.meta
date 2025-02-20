@@ -709,7 +709,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      scottishfold grey walk_0: -520417180908800153
+      scottishfold grey walk_1: 446661782850407224
+      scottishfold grey walk_10: 9113518472526832386
+      scottishfold grey walk_11: 6993247188946584907
+      scottishfold grey walk_12: 7641522533609902188
+      scottishfold grey walk_13: 9196657031827870558
+      scottishfold grey walk_14: -3716534662696508672
+      scottishfold grey walk_15: 7684997067386928586
+      scottishfold grey walk_16: -5657476675575719326
+      scottishfold grey walk_17: 2786915201906265716
+      scottishfold grey walk_18: 285764919084418838
+      scottishfold grey walk_19: 7221937464281554647
+      scottishfold grey walk_2: -5386196260476881755
+      scottishfold grey walk_20: -376415627407487429
+      scottishfold grey walk_21: 4641484870103648994
+      scottishfold grey walk_22: -3192950164367513569
+      scottishfold grey walk_23: -5089392094540868716
+      scottishfold grey walk_3: 8762696530110173929
+      scottishfold grey walk_4: -8902450797873015012
+      scottishfold grey walk_5: 2082259199651236082
+      scottishfold grey walk_6: 7722433150276213053
+      scottishfold grey walk_7: 2152531092787888633
+      scottishfold grey walk_8: -1568289167142445880
+      scottishfold grey walk_9: 1701274340829002387
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

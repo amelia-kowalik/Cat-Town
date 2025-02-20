@@ -709,7 +709,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      black walk_0: -4836956067402949500
+      black walk_1: -30926393339943524
+      black walk_10: -2186291603601588073
+      black walk_11: -4795475136109757436
+      black walk_12: 7861464136528603480
+      black walk_13: 7143703205070382722
+      black walk_14: 7813777023779540623
+      black walk_15: -2785443982966249968
+      black walk_16: 1409525294778948385
+      black walk_17: -1562363210295002782
+      black walk_18: -4544723055792238808
+      black walk_19: -3128531430897191914
+      black walk_2: -5456083838076553951
+      black walk_20: 1546017630131677363
+      black walk_21: -368700029477017712
+      black walk_22: 2445575654717807337
+      black walk_23: -4012081234024615060
+      black walk_3: 3552708814745071236
+      black walk_4: 7263288094192992378
+      black walk_5: -4378791299867141661
+      black walk_6: 8808726091044291591
+      black walk_7: -7771516924775671853
+      black walk_8: 3121417152399148559
+      black walk_9: 4851757291323309017
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
