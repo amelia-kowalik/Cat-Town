@@ -20,7 +20,7 @@ public class CoyoteAttackingComponent : Shooting
     public bool InRange(GameObject target)
     {
         float distance = CheckDistance(target);
-        Debug.Log($"Distance to target: {distance}");
+        //Debug.Log($"Distance to target: {distance}");
         return distance <= range;
     }
     
@@ -63,7 +63,7 @@ public class CoyoteAttackingComponent : Shooting
         if (fireCooldown <= 0f)
         {
             facingDirection = (target.transform.position - transform.position).normalized;
-            Debug.Log("Shooting!");
+            //Debug.Log("Shooting!");
             Shoot();
             fireCooldown = 1f / fireRate; 
         }

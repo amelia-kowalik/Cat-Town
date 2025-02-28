@@ -42,7 +42,7 @@ public partial class ShootPlayerAction : Action
             return Status.Failure;
         }
         
-        Debug.Log("Player is in range");
+        //Debug.Log("Player is in range");
         attackingComponent.CoyoteShoot(Player.Value);
         
         return Status.Success;

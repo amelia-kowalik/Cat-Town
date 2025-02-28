@@ -86728,66 +86728,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - spawners:
-    - {fileID: 942457486}
-    - {fileID: 1942183563}
-    - {fileID: 1651312590}
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 3
-  - spawners:
-    - {fileID: 942457486}
-    - {fileID: 1942183563}
-    - {fileID: 1651312590}
+    <coyoteCount>k__BackingField: 3
+    <timeBeforeSpawn>k__BackingField: 5
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 3
-  - spawners:
     - {fileID: 942457486}
-    - {fileID: 1942183563}
-    - {fileID: 1651312590}
+    <coyoteCount>k__BackingField: 4
+    <timeBeforeSpawn>k__BackingField: 15
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 5
-  - spawners:
     - {fileID: 942457486}
-    - {fileID: 1942183563}
     - {fileID: 1651312590}
+    <coyoteCount>k__BackingField: 5
+    <timeBeforeSpawn>k__BackingField: 30
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 7
-  - spawners:
     - {fileID: 942457486}
-    - {fileID: 1942183563}
     - {fileID: 1651312590}
+    - {fileID: 1942183563}
+    <coyoteCount>k__BackingField: 7
+    <timeBeforeSpawn>k__BackingField: 30
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 11
-  - spawners:
     - {fileID: 942457486}
-    - {fileID: 1942183563}
     - {fileID: 1651312590}
+    - {fileID: 1942183563}
+    <coyoteCount>k__BackingField: 9
+    <timeBeforeSpawn>k__BackingField: 30
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 15
-  - spawners:
     - {fileID: 942457486}
-    - {fileID: 1942183563}
     - {fileID: 1651312590}
+    - {fileID: 1942183563}
+    <coyoteCount>k__BackingField: 11
+    <timeBeforeSpawn>k__BackingField: 60
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 19
-  - spawners:
     - {fileID: 942457486}
-    - {fileID: 1942183563}
     - {fileID: 1651312590}
+    - {fileID: 1942183563}
+    <coyoteCount>k__BackingField: 14
+    <timeBeforeSpawn>k__BackingField: 60
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 23
-  - spawners:
     - {fileID: 942457486}
-    - {fileID: 1942183563}
     - {fileID: 1651312590}
+    - {fileID: 1942183563}
+    <coyoteCount>k__BackingField: 17
+    <timeBeforeSpawn>k__BackingField: 60
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 27
-  - spawners:
     - {fileID: 942457486}
-    - {fileID: 1942183563}
     - {fileID: 1651312590}
+    - {fileID: 1942183563}
+    <coyoteCount>k__BackingField: 20
+    <timeBeforeSpawn>k__BackingField: 90
+  - <spawners>k__BackingField:
     - {fileID: 740122892}
-    coyoteCount: 31
+    - {fileID: 942457486}
+    - {fileID: 1651312590}
+    - {fileID: 1942183563}
+    <coyoteCount>k__BackingField: 24
+    <timeBeforeSpawn>k__BackingField: 90
   coyotePrefab: {fileID: 1430695605417207354, guid: 134f54b563731ab4095cc0cfd6b9bcc9, type: 3}
 --- !u!4 &1768956598
 Transform:
