@@ -39,6 +39,10 @@ public class Shooting : MonoBehaviour
             {
                 bulletScript.Init(cowboy.GetCowboyDamage(),gameObject);
             }
+            else if (TryGetComponent<CatCowboy>(out CatCowboy catCowboy))
+            {
+                bulletScript.Init(catCowboy.GetCatCowboyDamage(),gameObject);
+            }
             
             Destroy(spawnedBullet, timeToDestroy);
     }

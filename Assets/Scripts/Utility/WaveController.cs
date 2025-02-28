@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class CoyoteSpawnerComponent : MonoBehaviour
+public class WaveController : MonoBehaviour
 {
     [System.Serializable] 
     public class WaveContent

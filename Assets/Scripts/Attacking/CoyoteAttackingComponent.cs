@@ -10,24 +10,35 @@ public class CoyoteAttackingComponent : Shooting
     private float fireCooldown = 0f;
     float range = 3f;
 
+    private float CheckDistance(GameObject target)
+        {
+            Vector2 selfPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            Vector2 targetPosition = new Vector2(target.transform.position.x, target.transform.position.y);
+            return Vector2.Distance(selfPosition, targetPosition);
+        }
+    
     public bool InRange(GameObject target)
     {
         float distance = CheckDistance(target);
         Debug.Log($"Distance to target: {distance}");
         return distance <= range;
     }
-
+    
     public bool InSight(GameObject target)
     {
         float distance = CheckDistance(target);
         Vector2 direction = (target.transform.position - transform.position).normalized;
         
+        //everything that raycast hits
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction, distance);
 
+        
         foreach (var hit in hits)
         {
+            //don't react to own collider
             if (hit.collider.gameObject == gameObject) continue;
 
+            //checks if sprite is on an obstacle layer 
             SpriteRenderer objectSpriteRend = hit.collider.GetComponent<SpriteRenderer>();
 
             if (objectSpriteRend != null)
@@ -44,12 +55,6 @@ public class CoyoteAttackingComponent : Shooting
         return true;
     }
     
-    private float CheckDistance(GameObject target)
-    {
-            Vector2 selfPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
-            Vector2 targetPosition = new Vector2(target.transform.position.x, target.transform.position.y);
-            return Vector2.Distance(selfPosition, targetPosition);
-    }
     
     public void CoyoteShoot(GameObject target)
     {

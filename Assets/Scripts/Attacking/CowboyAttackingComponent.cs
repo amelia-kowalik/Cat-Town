@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAttackingComponent : Shooting
+public class CowboyAttackingComponent : Shooting
 {
     
     // Update is called once per frame
