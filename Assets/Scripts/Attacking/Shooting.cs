@@ -3,11 +3,9 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab;
-
-    private Transform bulletSpawn;
-    private float bulletSpeed = 5f;
-    private float timeToDestroy = 2f;
+    [SerializeField] public GameObject bulletPrefab;
+    public float bulletSpeed = 5f;
+    public float timeToDestroy = 2f;
     [NonSerialized] public Vector2 facingDirection;
 
     private void Update()
@@ -38,10 +36,6 @@ public class Shooting : MonoBehaviour
             else if (TryGetComponent<Cowboy>(out Cowboy cowboy))
             {
                 bulletScript.Init(cowboy.GetCowboyDamage(),gameObject);
-            }
-            else if (TryGetComponent<CatCowboy>(out CatCowboy catCowboy))
-            {
-                bulletScript.Init(catCowboy.GetCatCowboyDamage(),gameObject);
             }
             
             Destroy(spawnedBullet, timeToDestroy);
