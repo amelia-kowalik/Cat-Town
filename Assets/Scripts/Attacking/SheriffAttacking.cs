@@ -1,11 +1,18 @@
 using UnityEngine;
 
-public class SheriffAttacking : MonoBehaviour
+public class SheriffAttacking : Shooting
 {
     [SerializeField] private float fireRate = 1f;
     [SerializeField] private float fireCooldown = 1f;
-    [SerializeField] float range = 3f;
-    
+    [SerializeField] private float range = 3f;
+    [SerializeField] private float safeDistance = 2f;
+
+
+    public bool TooClose(GameObject target)
+    {
+        float distance = Vector2.Distance(transform.position, target.transform.position);
+        return distance <= safeDistance;
+    }
     
     public bool InRange(GameObject target)
     {
@@ -45,5 +52,16 @@ public class SheriffAttacking : MonoBehaviour
         return true;
     }
 
-    
+    public void SheriffFire(GameObject target)
+    {
+        fireCooldown -= Time.deltaTime;
+        
+        if (fireCooldown <= 0f)
+        {
+            facingDirection = (target.transform.position - transform.position).normalized;
+            //Debug.Log("Shooting!");
+            Shoot();
+            fireCooldown = 1f / fireRate; 
+        }
+    }
 }

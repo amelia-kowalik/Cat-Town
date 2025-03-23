@@ -24,6 +24,7 @@ public class CoyoteAttackingComponent : Shooting
         return distance <= range;
     }
     
+    //checks if something blocks line of sight/shoot
     public bool InSight(GameObject target)
     {
         float distance = CheckDistance(target);

@@ -170,7 +170,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8212932519653517699, guid: 8d2190fe2a83f8946ade48588d8dc20d, type: 3}
+  bulletSpeed: 5
+  timeToDestroy: 2
   fireRate: 2
+  fireCooldown: 0
+  range: 3
 --- !u!114 &949293351280942458
 MonoBehaviour:
   m_ObjectHideFlags: 0
