@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class CoyoteAttackingComponent : Shooting
 {
-    [SerializeField]
-    private float fireRate = 1f;
-    private float fireCooldown = 0f;
-    float range = 3f;
+    
+    [SerializeField] private float fireRate = 1f;
+    [SerializeField] private float fireCooldown = 0f;
+    [SerializeField] float range = 3f;
 
     private float CheckDistance(GameObject target)
         {
