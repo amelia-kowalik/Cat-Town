@@ -39,20 +39,19 @@ public partial class EncounterAction : Action
 
         if (!sheriffAttacking.InRange(Target.Value) || !sheriffAttacking.InSight(Target.Value))
         {
-            return Status.Failure;
+            return Status.Running;
         }
         else if (sheriffAttacking.TooClose(Target.Value))
         {
             sheriff.RunAwayFrom(Target.Value);
-        }
-        else
-        {
-            sheriffAttacking.SheriffFire(Target.Value);
+            return Status.Running;
         }
         
         
+        sheriffAttacking.SheriffFire(Target.Value);
         
-        return Status.Success;
+        
+        return Status.Running;
     }
     
 }
