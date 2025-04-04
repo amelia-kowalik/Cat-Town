@@ -5,21 +5,11 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "Encounter", story: "[Self] encounters a(n) [Target]", category: "Action", id: "7fe6beb16730f8f8f8dd8b8aeea2c9ec")]
+[NodeDescription(name: "Encounter", story: "[Self] encounters an Enemy", category: "Action", id: "7fe6beb16730f8f8f8dd8b8aeea2c9ec")]
 public partial class EncounterAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Self;
-    [SerializeReference] public BlackboardVariable<GameObject> Target;
-    protected override Status OnStart()
-    {
-        if (Target.Value == null)
-        {
-            LogFailure("No agent assigned.");
-            return Status.Failure;
-        }
-        
-        return Status.Running;
-    }
+    //protected override Status OnStart() { }
 
     protected override Status OnUpdate()
     {
@@ -30,25 +20,35 @@ public partial class EncounterAction : Action
         
         Sheriff sheriff = Self.Value.GetComponent<Sheriff>();
         SheriffAttacking sheriffAttacking = Self.Value.GetComponent<SheriffAttacking>();
-        
-        if (sheriffAttacking == null)
+        GameObject closestEnemy = null;
+        float closestDistance = float.MaxValue;
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var enemy in enemies)
         {
-            Debug.Log("No SheriffAttack found."); 
-            return Status.Failure;
+            float distance = Vector3.Distance(Self.Value.transform.position, enemy.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestEnemy = enemy;
+            }
         }
 
-        if (!sheriffAttacking.InRange(Target.Value) || !sheriffAttacking.InSight(Target.Value))
+        if (closestEnemy != null)
         {
-            return Status.Running;
+            if (sheriffAttacking.TooClose(closestEnemy))
+            {
+                sheriff.RunAwayFrom(closestEnemy);
+                return Status.Running;
+            }
+
+            if (sheriffAttacking.InRange(closestEnemy) && sheriffAttacking.InSight(closestEnemy))
+            {
+                sheriffAttacking.SheriffFire(closestEnemy);
+                return Status.Running;
+            }
+
         }
-        else if (sheriffAttacking.TooClose(Target.Value))
-        {
-            sheriff.RunAwayFrom(Target.Value);
-            return Status.Running;
-        }
-        
-        
-        sheriffAttacking.SheriffFire(Target.Value);
         
         
         return Status.Running;

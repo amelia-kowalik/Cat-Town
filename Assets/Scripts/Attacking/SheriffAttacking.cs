@@ -4,8 +4,8 @@ public class SheriffAttacking : Shooting
 {
     [SerializeField] private float fireRate = 1f;
     [SerializeField] private float fireCooldown = 1f;
-    [SerializeField] private float range = 3f;
-    [SerializeField] private float safeDistance = 2f;
+    [SerializeField] private float range = 2f;
+    [SerializeField] private float safeDistance = 1f;
 
 
     public bool TooClose(GameObject target)
@@ -13,6 +13,8 @@ public class SheriffAttacking : Shooting
         float distance = Vector2.Distance(transform.position, target.transform.position);
         return distance <= safeDistance;
     }
+
+    
     
     public bool InRange(GameObject target)
     {

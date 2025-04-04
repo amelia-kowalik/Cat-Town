@@ -5,7 +5,6 @@ public class NPC : MonoBehaviour
 {
     private int lives = 1;
     
-    
     void Update()
     {
         transform.rotation = Quaternion.Euler(0, 0, 0);

@@ -31,11 +31,19 @@ public class Shooting : MonoBehaviour
 
             if (TryGetComponent<Coyote>(out Coyote coyote))
             {
-                bulletScript.Init(coyote.GetCoyoteDamage(), gameObject);
+                bulletScript.Init(coyote.GetDamage(), gameObject);
             }
             else if (TryGetComponent<Cowboy>(out Cowboy cowboy))
             {
-                bulletScript.Init(cowboy.GetCowboyDamage(),gameObject);
+                bulletScript.Init(cowboy.GetDamage(),gameObject);
+            }
+            else if (TryGetComponent<Sheriff>(out Sheriff sheriff))
+            {
+                bulletScript.Init(sheriff.GetDamage(), gameObject);
+            }
+            else if (TryGetComponent<Expert>(out Expert expert))
+            {
+                bulletScript.Init(expert.GetDamage(), gameObject);
             }
             
             Destroy(spawnedBullet, timeToDestroy);

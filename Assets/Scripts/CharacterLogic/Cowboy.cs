@@ -42,7 +42,7 @@ public class Cowboy : MonoBehaviour
         }
     }
 
-    public int GetCowboyDamage()
+    public int GetDamage()
     {
         int randomDamage = Random.Range(10, 50);
         if (randomDamage == 50)

@@ -39,13 +39,13 @@ public partial class ShootPlayerAction : Action
 
         if (!attackingComponent.InRange(Player.Value) || !attackingComponent.InSight(Player.Value))
         {
-            return Status.Failure;
+            return Status.Running;
         }
         
         //Debug.Log("Player is in range");
         attackingComponent.CoyoteShoot(Player.Value);
         
-        return Status.Success;
+        return Status.Running;
     }
 
     

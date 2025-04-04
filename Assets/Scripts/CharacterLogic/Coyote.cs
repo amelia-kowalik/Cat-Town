@@ -3,6 +3,7 @@ using UnityEngine;
 public class Coyote : MonoBehaviour
 {
     [SerializeField] private int health = 30;
+    [SerializeField] private int baseDamage = 10;
 
     public void TakeDamage(int damage)
     {
@@ -19,9 +20,9 @@ public class Coyote : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public int GetCoyoteDamage()
+    public int GetDamage()
     {
-        int randomDamage = Random.Range(10, 20);
+        int randomDamage = Random.Range(baseDamage, 20);
         return randomDamage;
     }
     
