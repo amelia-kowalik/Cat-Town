@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
     [SerializeField] private Cowboy cowboy;
+    [SerializeField] private GameObject expert;
     [SerializeField] private GameObject[] snipers;
 
     public List<Upgrade> upgrades = new List<Upgrade>();
@@ -72,7 +73,7 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    private void TrainNPCS()
+    private void TrainNpcs()
     {
         Upgrade selfDefense = upgrades.Find(x => x.upgradeName == "Self Defense");
 
@@ -94,6 +95,14 @@ public class UpgradeManager : MonoBehaviour
 
         snipers[sniperCount].SetActive(true);
 
+    }
+
+    private void UnlockExpert()
+    {
+        Upgrade expertUpgrade = upgrades.Find(x => x.upgradeName == "???");
+        
+        
+        expert.SetActive(true);
     }
     
 }
