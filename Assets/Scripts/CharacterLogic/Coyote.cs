@@ -18,6 +18,7 @@ public class Coyote : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+        GameManager.OnCoyoteDeath?.Invoke();
     }
 
     public int GetDamage()

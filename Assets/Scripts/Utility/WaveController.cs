@@ -65,6 +65,7 @@ public class WaveController : MonoBehaviour
         if (currentWave + 1 < waves.Length)
         {
             currentWave++;
+            GameManager.OnNextWave?.Invoke(currentWave);
         }
         else
         {

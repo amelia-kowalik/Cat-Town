@@ -68,19 +68,20 @@ public class CoyoteAttack : Shooting
         }
     }
 
-    /*private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("NPC"))
         {
             KidnapCat(other.gameObject);
         }
-    }*/
+    }
 
-    /*public void KidnapCat(GameObject npc)
+    public void KidnapCat(GameObject npc)
     {
-        Debug.Log("Kidnap Cat");
+        Debug.Log("Kidnapped Cat");
         npc.SetActive(false);
-    }*/
+        GameManager.OnCatKidnapped?.Invoke();
+    }
     
     
 }
