@@ -29,21 +29,21 @@ public partial class ShootPlayerAction : Action
             return Status.Failure;
         }
         
-        CoyoteAttackingComponent attackingComponent = Self.Value.GetComponent<CoyoteAttackingComponent>();
+        CoyoteAttack attack = Self.Value.GetComponent<CoyoteAttack>();
 
-        if (attackingComponent == null)
+        if (attack == null)
         {
             Debug.Log("No CoyoteAttackingComponent found."); 
             return Status.Failure;
         }
 
-        if (!attackingComponent.InRange(Player.Value) || !attackingComponent.InSight(Player.Value))
+        if (!attack.InRange(Player.Value) || !attack.InSight(Player.Value))
         {
             return Status.Running;
         }
         
         //Debug.Log("Player is in range");
-        attackingComponent.CoyoteShoot(Player.Value);
+        attack.CoyoteShoot(Player.Value);
         
         return Status.Running;
     }

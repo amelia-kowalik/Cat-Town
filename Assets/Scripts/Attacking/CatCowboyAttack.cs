@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CatCowboyAttackingComponent : Shooting
+public class CatCowboyAttack : Shooting
 {
     [SerializeField] private float radius = 5f;
     [SerializeField] [Range(1f, 360f)] private float angle = 90f;

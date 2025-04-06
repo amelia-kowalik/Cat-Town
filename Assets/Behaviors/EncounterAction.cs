@@ -19,7 +19,7 @@ public partial class EncounterAction : Action
         }
         
         Sheriff sheriff = Self.Value.GetComponent<Sheriff>();
-        SheriffAttacking sheriffAttacking = Self.Value.GetComponent<SheriffAttacking>();
+        SheriffAttack sheriffAttack = Self.Value.GetComponent<SheriffAttack>();
         GameObject closestEnemy = null;
         float closestDistance = float.MaxValue;
 
@@ -36,15 +36,15 @@ public partial class EncounterAction : Action
 
         if (closestEnemy != null)
         {
-            if (sheriffAttacking.TooClose(closestEnemy))
+            if (sheriffAttack.TooClose(closestEnemy))
             {
                 sheriff.RunAwayFrom(closestEnemy);
                 return Status.Running;
             }
 
-            if (sheriffAttacking.InRange(closestEnemy) && sheriffAttacking.InSight(closestEnemy))
+            if (sheriffAttack.InRange(closestEnemy) && sheriffAttack.InSight(closestEnemy))
             {
-                sheriffAttacking.SheriffFire(closestEnemy);
+                sheriffAttack.SheriffFire(closestEnemy);
                 return Status.Running;
             }
 

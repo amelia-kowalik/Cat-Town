@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SheriffAttacking : Shooting
+public class SheriffAttack : Shooting
 {
     [SerializeField] private float fireRate = 1f;
     [SerializeField] private float fireCooldown = 1f;

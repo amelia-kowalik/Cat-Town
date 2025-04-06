@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class CoyoteAttackingComponent : Shooting
+public class CoyoteAttack : Shooting
 {
     
     [SerializeField] private float fireRate = 1f;
