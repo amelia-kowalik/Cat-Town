@@ -1,87 +1,38 @@
-# Cat-Town
+# Cat Town
 
-# **1. Przegląd**
+## 1. Informacje ogólne
+- **Tytuł**: Cat Town
+- **Gatunek**: Strategia, Tower Defense
+- **Liczba graczy**: Jeden
+- **Platformy**: Gra komputerowa
+- **Sterowanie**: Myszka i klawisze: WASD i spacja
+- **Styl graficzny**: Pixel Art
 
-## ⇒ Kluczowe punkty
+## 2. Opis rozgrywki
+Gracz wciela się w postać kowboja, który trafia do miasta zamieszkanego przez koty. Jego głównym zadaniem jest ochrona mieszkańców przed atakami fal wrogich kojotów. Rozgrywka przebiega w widoku top-down, a interakcja z budynkami umożliwia zakup ulepszeń i przedmiotów regenerujących.
 
-**Tytuł**
+## 3. Kluczowe mechaniki
 
-➡️ Cat town
+- **System walki**: Gracz wykorzystuje broń dystansową do eliminowania nadchodzących fal przeciwników.
+- **Ekonomia**: Pokonani wrogowie pozostawiają monety, które można wymieniać na ulepszenia w specjalnych sklepach.
+- **Progresja**: Z każdą kolejną falą poziom trudności wzrasta poprzez zwiększenie liczby i siły przeciwników.
+- **Warunki zwycięstwa**: Pokonanie wszystkich fal kojotów, w tym finalnego bossa, przy jednoczesnym niedopuszczeniu do porwania zbyt dużej liczby kotów.
+- **Warunki przegranej**: Utrata kotów przekraczająca określony limit.
 
-**Gatunek** 
+## 4. Struktura progresji
 
-➡️ Taktyczna gra typu Tower(Town) Defense
+- **Początkowa faza gry**: Fale wrogów są stosunkowo łatwe, umożliwiając graczowi zapoznanie się z mechanikami rozgrywki i zdobycie pierwszych monet.
+- **Stopniowe zwiększanie trudności**: Kolejne fale cechują się większą liczbą przeciwników o rosnącej wytrzymałości i szybkości.
+- **Zaawansowana faza gry**: Przedostatnia fala odblokowuje dostęp do unikalnego ulepszenia.
+- **Finałowa fala**: Ostateczne starcie z bossem kojotów. Pokonanie jego oraz pozostałych kojotów na mapie kończy rozgrywkę wygraną.
 
-**Liczba graczy** 
+## 5. Oprawa audiowizualna
 
-➡️ Solo
+- **Grafika**: Styl Pixel Art inspirowany grami takimi jak Stardew Valley. Widok top-down.
+- **Muzyka**: Stonowana muzyka, gdy gracz przebywa w ekranie startowym lub sklepikach. Dynamiczna muzyka westernowa. Wesoła melodia po osiągnięciu zwycięstwa.
 
-**Grupa docelowa** 
+## 6. Filary projektu
 
-➡️ Gracze casualowi, nastolatki i młodzi dorośli
-
-**Platformy** 
-
-➡️ PC
-
-**Silnik gry**
-
-➡️ Unity
-
-**Tożsamość gry** 
-
-➡️ Kowboj w mieście kotów broni je przed kojotami.
-
-**Styl graficzny** 
-
-➡️ 2D, Pixel Art
-
-## ⇒ 3K
-
-**Kamera** 
-
-➡️ 2D following
-
-**Kto**
-
-➡️ Kowboj, który trafił do miasta kotów
-
-**Kontroler**
-
-➡️ WASD - ruch
-
-SPACE - strzelanie
-
-MYSZKA - wybieranie umiejętności
-
-# **2. Gra**
-
-**Filary designu** 
-
-➡️ Dziki zachód. Strzelanie. Ulepszenia.
-
-**Główne mechaniki** 
-
-➡️ Gracz decyduje, które ulepszenia najbardziej pomogą mu w obronie.
-
-**Szkic głównej rozgrywki**
-
-➡️ Gracz steruje kowbojem, widoczne jest jego życie, heale i limit kotów, które mogą zostać porwane. Po przyjściu do sklepu,szeryfa i saloonu widoczny jest widok sklepu z ulepszeniami lub healami.
-
-**Progresja w grze** 
-
-➡️ Gra rozpoczyna się od słabej fali kojotów, kowboj zabijając je dostaje monety, za które może kupić ulepszenia. Z każdą falą trudność zwiększa się. W jednej z ostatecznych faz możliwe jest kupienia dodatkowego ulepszenia (zwerbowanie kota kowboja eksperta). Ostatnia fala przynosi ze sobą kojota eksperta - pokonanie go i innych kojotów oznacza wygraną.
-
-**Warunki wygranej i przegranej** 
-
-➡️ Wygrana = pokonanie wszystkich fal kojotów i na koniec kojota Experta
-
-Przegrania = pozwolenie na porwanie danej ilości kotów
-
-**Wygląd i klimat** 
-
-➡️ 2D pixel art, top-down, w stylu Stardew Valley
-
-**Muzyka i dźwięk**
-
-➡️ Wesoła muzyka z dzikiego zachodu, groźna, gdy atakują kojoty
+- Estetyka Dzikiego Zachodu
+- Mechanika strzelania
+- System progresji i ulepszeń
