@@ -34,7 +34,7 @@ public class UpgradeManager : MonoBehaviour
     {
         foreach (var upgrade in upgrades)
         {
-            if (upgrade.appliedTo == "Game" && upgrade.currentLevel > 0)
+            if (upgrade.appliedTo == "Cowboy" && upgrade.currentLevel > 0)
             {
                 ApplyStatUpgrade(upgrade);
             }
@@ -71,6 +71,24 @@ public class UpgradeManager : MonoBehaviour
         {
             Debug.Log("Upgrade Failed");
         }
+    }
+
+    public bool BuyUpgrade(string upgradeName)
+    {
+        Upgrade upgradeToBuy = upgrades.Find(x => x.upgradeName == upgradeName);
+
+        if (upgradeToBuy == null || !upgradeToBuy.CanLevelUp())
+        {
+            return false;
+        }
+
+        if (ScoreManager.Instance.SpendGold(upgradeToBuy.cost))
+        {
+            LevelUpUpgrade(upgradeName);
+            return true;
+        }
+
+        return false;
     }
 
     private void TrainNpcs()

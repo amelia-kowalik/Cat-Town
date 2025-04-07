@@ -3,7 +3,6 @@ using Unity.Behavior;
 using UnityEngine;
 using Action = Unity.Behavior.Action;
 using Unity.Properties;
-using Unity.VisualScripting;
 
 [Serializable, GeneratePropertyBag]
 [NodeDescription(name: "ShootEnemy", story: "[Self] shoots [Target]", category: "Action", id: "f1c3287b767c4184fc805f396024433c")]
@@ -31,32 +30,19 @@ public partial class ShootEnemyAction : Action
         
         ExpertAttack expertAttack = Self.Value.GetComponent<ExpertAttack>();
         
-        GameObject closestEnemy = null;
-        float closestDistance = float.MaxValue;
-
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (var enemy in enemies)
+        
+        
+        if (!expertAttack.InRange(Target.Value) || !expertAttack.InSight(Target.Value))
         {
-            float distance = Vector3.Distance(Self.Value.transform.position, enemy.transform.position);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestEnemy = enemy;
-            }
+            return Status.Running;
         }
-
-        if (closestEnemy != null)
-        {
-            if (expertAttack.InRange(Target.Value) && expertAttack.InSight(Target.Value))
-            {
-                expertAttack.ExpertFire(closestEnemy);
-                return Status.Running;
-            }
-        }
+        
+        expertAttack.ExpertFire(Target.Value);
         
         return Status.Running;
         
     }
+
     
 }
 

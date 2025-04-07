@@ -3,17 +3,22 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private int gold;
+    public static ScoreManager Instance { get; private set; }
+    [SerializeField] public int gold;
     [SerializeField] private int catKidnapLimit = 3;
     private int catsKidnapped;
     private bool limitReached;
     private int currentWave;
+    
 
-    
-    
-    void Start()
+    private void Awake()
     {
-        
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
     
     void OnEnable()
@@ -27,7 +32,7 @@ public class ScoreManager : MonoBehaviour
     {
         GameManager.OnCatKidnapped -= OnCatKidnapped;
         GameManager.OnCoyoteDeath -= AddGold;
-        GameManager.OnNextWave += GetWave;
+        GameManager.OnNextWave -= GetWave;
     }
 
 
@@ -35,6 +40,16 @@ public class ScoreManager : MonoBehaviour
     {
         int bonus = currentWave * 2;
         gold += bonus;
+    }
+
+    public bool SpendGold(int amount)
+    {
+        if (gold >= amount)
+        {
+            gold -= amount;
+            return true;
+        }
+        return false;
     }
     
     private void OnCatKidnapped()
