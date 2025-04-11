@@ -17,7 +17,7 @@ public class CatCowboy : MonoBehaviour
         
     }
 
-    public int GetCatCowboyDamage()
+    public int GetDamage()
     {
         return damage;
     }

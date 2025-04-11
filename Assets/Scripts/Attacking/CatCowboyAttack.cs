@@ -77,14 +77,22 @@ public class CatCowboyAttack : Shooting
 
             Vector2 direction = (target.position - transform.position).normalized;
 
-            // Stwórz pocisk
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            
+            GameObject spawnedBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Rigidbody2D rb = spawnedBullet.GetComponent<Rigidbody2D>();
 
             if (rb != null)
             {
                 rb.linearVelocity = direction * bulletSpeed;
             }
+            
+            Bullet bulletScript = spawnedBullet.GetComponent<Bullet>();
+
+            if (TryGetComponent<CatCowboy>(out CatCowboy catCowboy))
+            {
+                bulletScript.Init(catCowboy.GetDamage(), gameObject);
+            }
+            
             fireCooldown = 1f / fireRate;
         }
     }
