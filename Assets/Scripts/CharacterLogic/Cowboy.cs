@@ -1,17 +1,30 @@
+using System;
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Cowboy : MonoBehaviour
 {
     public Dictionary<string,float> Stats { get; set; }
     [SerializeField, ReadOnly] private float currentHealth;
+
+    private void OnEnable()
+    {
+        GameManager.OnFoodBought += Heal;
+    }
     
+    private void OnDisable()
+    {
+        GameManager.OnFoodBought -= Heal;
+    }
+
     public void Awake()
     {
         Stats = new Dictionary<string, float>()
         {
             { "health", 100f },
+            { "maxHealth", 100f },
             { "walkingSpeed", 3f },
             { "baseDamage", 10f }
         };
@@ -34,7 +47,7 @@ public class Cowboy : MonoBehaviour
 
     public void Heal(int heal)
     {
-        Stats["health"] += heal;
+        Stats["health"] = Mathf.Min(Stats["health"] + heal, Stats["maxHealth"]);
     }
 
     public void CowboyDeath()

@@ -3,25 +3,29 @@ using UnityEngine;
 
 struct Food
 {
-    private string name;
-    private int healthAdded;
-    private int cost;
+    public string Name { get; private set; }
+    public int HealthAdded { get; private set; }
+    public int Cost { get; private set; }
 
-    public int GetCost()
+    public Food(string name, int healthAdded, int cost)
     {
-        return cost;
+        Name = name;
+        HealthAdded = healthAdded;
+        Cost = cost;
     }
 }
 
 public class HealthShop
 {
     private List<Food> foods;
+    
+    
 
     private void BuyFood(Food food )
     {
-        if (ScoreManager.Instance.SpendGold(food.GetCost()))
+        if (ScoreManager.Instance.SpendGold(food.Cost))
         {
-            
+            GameManager.OnNextWave?.Invoke(food.HealthAdded);
         }
     }
     

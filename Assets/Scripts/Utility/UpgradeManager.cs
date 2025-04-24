@@ -27,6 +27,11 @@ public class UpgradeManager : MonoBehaviour
         if (upgrade.appliedTo == "Cowboy" && cowboy.Stats.ContainsKey(upgrade.stat))
         {
             cowboy.Stats[upgrade.stat] += upgrade.Amount;
+            
+            if (upgrade.stat == "maxHealth")
+            {
+                cowboy.Stats["health"] = Mathf.Min(cowboy.Stats["health"], cowboy.Stats["maxHealth"]);
+            }
         }
     }
 
