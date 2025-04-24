@@ -37,7 +37,7 @@ public partial class ShootEnemyAction : Action
             return Status.Running;
         }
         
-        expertAttack.ExpertFire(Target.Value);
+        expertAttack.TryShoot(Target.Value);
         
         return Status.Running;
         

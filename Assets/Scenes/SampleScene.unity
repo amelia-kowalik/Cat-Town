@@ -234,11 +234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4500916090353041440, guid: 523a769386e90024781cadd7350d8b5d, type: 3}
-  bulletSpeed: 5
-  timeToDestroy: 2
   radius: 5
   angle: 180
-  fireRate: 1
 --- !u!1 &61699062
 GameObject:
   m_ObjectHideFlags: 0
@@ -77262,12 +77259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4500916090353041440, guid: 523a769386e90024781cadd7350d8b5d, type: 3}
-  bulletSpeed: 5
-  timeToDestroy: 2
-  fireRate: 1
-  fireCooldown: 1
-  range: 3
-  safeDistance: 2
+  safeDistance: 1
 --- !u!114 &560748277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84381,11 +84373,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4500916090353041440, guid: 523a769386e90024781cadd7350d8b5d, type: 3}
-  bulletSpeed: 5
-  timeToDestroy: 2
   radius: 5
   angle: 180
-  fireRate: 1
 --- !u!1 &1273857776
 GameObject:
   m_ObjectHideFlags: 0
@@ -86189,11 +86178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4500916090353041440, guid: 523a769386e90024781cadd7350d8b5d, type: 3}
-  bulletSpeed: 5
-  timeToDestroy: 2
   radius: 5
   angle: 180
-  fireRate: 1
 --- !u!1 &1723948962
 GameObject:
   m_ObjectHideFlags: 0

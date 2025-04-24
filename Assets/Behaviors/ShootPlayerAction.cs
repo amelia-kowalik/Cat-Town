@@ -43,7 +43,7 @@ public partial class ShootPlayerAction : Action
         }
         
         //Debug.Log("Player is in range");
-        attack.CoyoteShoot(Player.Value);
+        attack.TryShoot(Player.Value);
         
         return Status.Running;
     }

@@ -1,12 +1,13 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CatCowboyAttack : Shooting
+public class CatCowboyAttack : BaseAttack
 {
     [SerializeField] private float radius = 5f;
-    [SerializeField] [Range(1f, 360f)] private float angle = 90f;
-    [SerializeField] private float fireRate = 1f;
-    private float fireCooldown = 0f;
+    [SerializeField] [Range(1f, 360f)] private float angle = 90f; 
+    protected override float FireRate => 1f;
+    protected override float Range => 0f;
+    protected override float BulletSpeed => 4f;
     private Transform target;
 
 
@@ -15,15 +16,15 @@ public class CatCowboyAttack : Shooting
         target = GetCoyoteInSight();
     }
     
-    void Update()
+    protected override void Update()
     {
-        fireCooldown -= Time.deltaTime;
+        base.Update();
 
         target = GetCoyoteInSight();
 
         if (target != null)
         {
-            CatCowboyShoot();
+            TryShoot(target.gameObject);
         }
     }
     
@@ -45,19 +46,6 @@ public class CatCowboyAttack : Shooting
 
             if (Vector2.Angle(transform.up, directionToTarget) < angle / 2)
             {
-
-                //RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget);
-
-
-                /*if (raycastHit.collider != null && raycastHit.collider.transform != target)
-                {
-                    SpriteRenderer obstacleSpriteRenderer = raycastHit.collider.GetComponent<SpriteRenderer>();
-
-                    if (obstacleSpriteRenderer != null && (obstacleSpriteRenderer.sortingLayerName == "Obstacles" || obstacleSpriteRenderer.sortingLayerName == "Walk behind"))
-                    {
-                        continue;
-                    }
-                }*/
                 if (distanceToTarget < closestDistance)
                 {
                     closestCoyote = target;
@@ -69,31 +57,17 @@ public class CatCowboyAttack : Shooting
         return closestCoyote;
     }
 
-    public void CatCowboyShoot()
+    public override void TryShoot(GameObject target)
     {
-        if (fireCooldown <= 0f)
-        {
-            if (target == null) return;
+        
+        if (fireCooldown > 0f) return;
 
-            Vector2 direction = (target.position - transform.position).normalized;
+        Vector2 direction = (target.transform.position - transform.position).normalized;
 
-            
-            GameObject spawnedBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            Rigidbody2D rb = spawnedBullet.GetComponent<Rigidbody2D>();
+        int damage = GetComponent<CatCowboy>().GetDamage();
+        FireBullet(direction, damage);
 
-            if (rb != null)
-            {
-                rb.linearVelocity = direction * bulletSpeed;
-            }
-            
-            Bullet bulletScript = spawnedBullet.GetComponent<Bullet>();
-
-            if (TryGetComponent<CatCowboy>(out CatCowboy catCowboy))
-            {
-                bulletScript.Init(catCowboy.GetDamage(), gameObject);
-            }
-            
-            fireCooldown = 1f / fireRate;
+        fireCooldown = 1f / FireRate;
         }
-    }
 }
+

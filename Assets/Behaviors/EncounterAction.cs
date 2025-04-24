@@ -44,7 +44,7 @@ public partial class EncounterAction : Action
 
             if (sheriffAttack.InRange(closestEnemy) && sheriffAttack.InSight(closestEnemy))
             {
-                sheriffAttack.SheriffFire(closestEnemy);
+                sheriffAttack.TryShoot(closestEnemy);
                 return Status.Running;
             }
 
