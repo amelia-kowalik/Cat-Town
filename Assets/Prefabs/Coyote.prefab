@@ -211,7 +211,7 @@ MonoBehaviour:
         GUID:
           m_Value0: 3508016906383669386
           m_Value1: 10365842438642643072
-        Name: Player
+        Name: PlayerTarget
         m_Value: {fileID: 0}
     - rid: 5054279359321342824
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}

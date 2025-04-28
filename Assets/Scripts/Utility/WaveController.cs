@@ -13,31 +13,31 @@ public class WaveController : MonoBehaviour
     }
 
     [SerializeField] private Wave[] waves;
-    [SerializeField] private GameObject coyotePrefab;
-    private int currentWave = 0;
-    private float timeBetweenWaves;
-    private bool canSpawn = true;
+    [SerializeField] private GameObject bossSpawner;
+    [SerializeField] private int currentWave = 0;
+    private float _timeBetweenWaves;
+    private bool _canSpawn = true;
 
 
     private void Awake()
     {
-         timeBetweenWaves = waves[currentWave].timeBeforeSpawn;
+         _timeBetweenWaves = waves[currentWave].timeBeforeSpawn;
     }
     
     private void Update()
     {
-        if (!canSpawn)
+        if (!_canSpawn)
         {
             return;
         }
 
-        if (Time.time >= timeBetweenWaves)
+        if (Time.time >= _timeBetweenWaves)
         {
             Debug.Log("wave:" + currentWave);
             StartWave();
             NextWave();
             
-            timeBetweenWaves = Time.time + waves[currentWave].timeBeforeSpawn;
+            _timeBetweenWaves = Time.time + waves[currentWave].timeBeforeSpawn;
         }
     }
 
@@ -51,11 +51,15 @@ public class WaveController : MonoBehaviour
             return;
         }
 
+        if (currentWave == 11)
+        {
+            SpawnManager.Instance.SpawnBoss(bossSpawner);
+        }
+        
         for (int i = 0; i < wave.coyoteCount; i++)
         {
             GameObject randomSpawner = spawners[Random.Range(0, spawners.Length)];
-            Vector2 spawnPosition = new Vector2(randomSpawner.transform.position.x, randomSpawner.transform.position.y);
-            Instantiate(coyotePrefab, spawnPosition, Quaternion.identity);
+            SpawnManager.Instance.SpawnCoyote(randomSpawner);
         }
 
     }
@@ -69,7 +73,7 @@ public class WaveController : MonoBehaviour
         }
         else
         {
-            canSpawn = false;
+            _canSpawn = false;
         }
     }
     

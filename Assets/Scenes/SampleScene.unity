@@ -84503,6 +84503,7 @@ MonoBehaviour:
   m_Graph: {fileID: -6137355459137453469, guid: f643e2300cd31544cbce7a59f9bd20ca, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 5909936722544689261
+  - rid: 5909937123061924131
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -84516,6 +84517,14 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1273857776}
+    - rid: 5909937123061924131
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 4228577741753549670
+          m_Value1: 10963597463302600716
+        Name: Target
+        m_Value: {fileID: 1430695605417207354, guid: 134f54b563731ab4095cc0cfd6b9bcc9, type: 3}
 --- !u!114 &1273857781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84543,11 +84552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4500916090353041440, guid: 523a769386e90024781cadd7350d8b5d, type: 3}
-  bulletSpeed: 5
-  timeToDestroy: 2
-  fireRate: 2
-  fireCooldown: 1
-  range: 4
 --- !u!1 &1324564499
 GameObject:
   m_ObjectHideFlags: 0
@@ -87590,7 +87594,8 @@ MonoBehaviour:
     - {fileID: 878760564}
     <coyoteCount>k__BackingField: 24
     <timeBeforeSpawn>k__BackingField: 90
-  coyotePrefab: {fileID: 1430695605417207354, guid: 134f54b563731ab4095cc0cfd6b9bcc9, type: 3}
+  bossSpawner: {fileID: 878760564}
+  currentWave: 10
 --- !u!4 &1768956598
 Transform:
   m_ObjectHideFlags: 0
