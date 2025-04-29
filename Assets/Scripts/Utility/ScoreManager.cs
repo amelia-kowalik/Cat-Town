@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
-    [SerializeField] public int gold;
+    [SerializeField] private int gold;
     [SerializeField] private int catKidnapLimit = 3;
     private int catsKidnapped;
     private bool limitReached;
@@ -50,6 +50,11 @@ public class ScoreManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public int GetGold()
+    {
+        return gold;
     }
     
     private void OnCatKidnapped()

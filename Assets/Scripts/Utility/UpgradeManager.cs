@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+    public static UpgradeManager Instance { get; private set; }
     [SerializeField] private Cowboy cowboy;
     [SerializeField] private GameObject expert;
     [SerializeField] private GameObject[] snipers;
 
     public List<Upgrade> upgrades = new List<Upgrade>();
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
     
-    private void Start()
+    void Start()
     {
         upgrades.Add(new Upgrade("Faster Walking", "Cowboy", "walkingSpeed", 3f, 2, 10));
         upgrades.Add(new Upgrade("Better Gun", "Cowboy", "baseDamage", 10f, 5, 10));

@@ -9,10 +9,10 @@ public class Upgrade
     public float baseLevel;
     public int currentLevel;
     public int maxLevel;
-    public int cost;
+    public int baseCost;
     public Action upgradeAction;
 
-    public Upgrade(string upgradeName, string appliedTo, string stat, float baseLevel, int maxLevel, int cost)
+    public Upgrade(string upgradeName, string appliedTo, string stat, float baseLevel, int maxLevel, int baseCost)
     {
         this.upgradeName = upgradeName;
         this.appliedTo = appliedTo;
@@ -20,7 +20,14 @@ public class Upgrade
         this.baseLevel = baseLevel;
         this.currentLevel = 1;
         this.maxLevel = maxLevel;
-        this.cost = cost;
+        this.baseCost = baseCost;
+    }
+    public int cost
+    {
+        get
+        {
+            return Mathf.CeilToInt(baseCost * Mathf.Pow(1.3f, currentLevel - 1));
+        }
     }
 
     public float Amount{
