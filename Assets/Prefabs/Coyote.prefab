@@ -199,20 +199,12 @@ MonoBehaviour:
   m_Graph: {fileID: 1905706278172989381, guid: 79254bddd0bbec948b9cd7c40394c6e5, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 5054279359321342824
-  - rid: 3795436153440568058
+  - rid: 5909937237116059778
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 3795436153440568058
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 3508016906383669386
-          m_Value1: 10365842438642643072
-        Name: PlayerTarget
-        m_Value: {fileID: 0}
     - rid: 5054279359321342824
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -221,6 +213,14 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1430695605417207354}
+    - rid: 5909937237116059778
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1116830456286026570
+          m_Value1: 12036091041690415146
+        Name: PlayerTarget
+        m_Value: {fileID: 0}
 --- !u!195 &3346640889039382016
 NavMeshAgent:
   m_ObjectHideFlags: 0

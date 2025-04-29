@@ -4,6 +4,10 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
+    
+    public event Action<int> OnGoldChanged;
+
+    
     [SerializeField] private int gold;
     [SerializeField] private int catKidnapLimit = 3;
     private int catsKidnapped;
@@ -40,6 +44,8 @@ public class ScoreManager : MonoBehaviour
     {
         int bonus = currentWave * 2;
         gold += bonus;
+        
+        OnGoldChanged?.Invoke(gold);
     }
 
     public bool SpendGold(int amount)
