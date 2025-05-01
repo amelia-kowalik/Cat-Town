@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class Cowboy : MonoBehaviour
 {
+    public event Action<float, float> OnHealthChanged;
+
     public Dictionary<string,float> Stats { get; set; }
     [SerializeField, ReadOnly] private float currentHealth;
 
@@ -25,7 +27,7 @@ public class Cowboy : MonoBehaviour
         {
             { "health", 100f },
             { "maxHealth", 100f },
-            { "walkingSpeed", 3f },
+            { "walkingSpeed", 2f },
             { "baseDamage", 10f }
         };
         currentHealth = Stats["health"];
@@ -43,11 +45,13 @@ public class Cowboy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Stats["health"] -= damage;
+        OnHealthChanged?.Invoke(Stats["health"], Stats["maxHealth"]);
     }
 
     public void Heal(int heal)
     {
         Stats["health"] = Mathf.Min(Stats["health"] + heal, Stats["maxHealth"]);
+        OnHealthChanged?.Invoke(Stats["health"], Stats["maxHealth"]);
     }
 
     public void CowboyDeath()

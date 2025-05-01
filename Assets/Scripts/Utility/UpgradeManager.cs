@@ -23,8 +23,8 @@ public class UpgradeManager : MonoBehaviour
     
     void Start()
     {
-        upgrades.Add(new Upgrade("Faster Walking", "Cowboy", "walkingSpeed", 3f, 2, 10));
-        upgrades.Add(new Upgrade("Better Gun", "Cowboy", "baseDamage", 10f, 5, 10));
+        upgrades.Add(new Upgrade("Faster Walk", "Cowboy", "walkingSpeed", 3f, 2, 10));
+        upgrades.Add(new Upgrade("Better Pistol", "Cowboy", "baseDamage", 10f, 5, 10));
         upgrades.Add(new Upgrade("Toughen Up", "Cowboy", "health", 100f, 3, 10));
         upgrades.Add(new Upgrade("Self Defense", "Game", "", 0f, 2, 10));
         upgrades.Add(new Upgrade("Cat Cowboys", "Game", "", 0f, 3, 10));

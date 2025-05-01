@@ -53,6 +53,7 @@ public class ScoreManager : MonoBehaviour
         if (gold >= amount)
         {
             gold -= amount;
+            OnGoldChanged?.Invoke(gold);
             return true;
         }
         return false;
@@ -63,9 +64,10 @@ public class ScoreManager : MonoBehaviour
         return gold;
     }
     
-    private void OnCatKidnapped()
+    public void OnCatKidnapped()
     {
         catsKidnapped++;
+        GameManager.OnCatKidnappedChanged?.Invoke(catsKidnapped,catKidnapLimit);
 
         if (catsKidnapped >= catKidnapLimit)
         {

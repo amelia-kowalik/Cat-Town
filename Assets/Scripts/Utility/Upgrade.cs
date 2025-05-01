@@ -26,7 +26,7 @@ public class Upgrade
     {
         get
         {
-            return Mathf.CeilToInt(baseCost * Mathf.Pow(1.3f, currentLevel - 1));
+            return Mathf.CeilToInt(baseCost * Mathf.Pow(2.3f, currentLevel - 1));
         }
     }
 
