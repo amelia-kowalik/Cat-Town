@@ -23,13 +23,24 @@ public class UpgradeManager : MonoBehaviour
     
     void Start()
     {
+        //stat upgrades
         upgrades.Add(new Upgrade("Faster Walk", "Cowboy", "walkingSpeed", 3f, 2, 10));
         upgrades.Add(new Upgrade("Better Pistol", "Cowboy", "baseDamage", 10f, 5, 10));
         upgrades.Add(new Upgrade("Toughen Up", "Cowboy", "health", 100f, 3, 10));
-        upgrades.Add(new Upgrade("Self Defense", "Game", "", 0f, 2, 10));
-        upgrades.Add(new Upgrade("Cat Cowboys", "Game", "", 0f, 3, 10));
-        upgrades.Add(new Upgrade("???", "Game", "", 0f, 1, 10));
-    
+        
+        //other upgrades
+        Upgrade selfDefenseUpgrade = new Upgrade("Self Defense", "Game", "", 0f, 3, 10);
+        selfDefenseUpgrade.upgradeAction = TrainNpcs;
+        upgrades.Add(selfDefenseUpgrade);
+        
+        Upgrade catCowboysUpgrade = new Upgrade("Cat Cowboys", "Game", "", 0f, 3, 10);
+        catCowboysUpgrade.upgradeAction = TrainSniper;
+        upgrades.Add(catCowboysUpgrade);
+        
+        Upgrade expertUpgrade =new Upgrade("Expert", "Game", "", 0f, 1, 10);
+        expertUpgrade.upgradeAction = UnlockExpert;
+        upgrades.Add(expertUpgrade);
+        
     ApplyAllStatUpgrades();
     }
 
@@ -111,7 +122,7 @@ public class UpgradeManager : MonoBehaviour
     {
         Upgrade selfDefense = upgrades.Find(x => x.upgradeName == "Self Defense");
 
-        int chancesToPunch = selfDefense.currentLevel + 1;
+        int chancesToPunch = selfDefense.currentLevel;
 
         NPC[] npcs = FindObjectsByType<NPC>(FindObjectsSortMode.None);
         foreach (var npc in npcs)
@@ -125,15 +136,15 @@ public class UpgradeManager : MonoBehaviour
     {
         Upgrade catCowboys = upgrades.Find(x => x.upgradeName == "Cat Cowboys");
 
-        int sniperCount = catCowboys.currentLevel + 1;
-
+        int sniperCount = catCowboys.currentLevel;
+        
         snipers[sniperCount].SetActive(true);
 
     }
 
     private void UnlockExpert()
     {
-        Upgrade expertUpgrade = upgrades.Find(x => x.upgradeName == "???");
+        Upgrade expertUpgrade = upgrades.Find(x => x.upgradeName == "Expert");
         
         
         expert.SetActive(true);

@@ -18,7 +18,7 @@ public class Upgrade
         this.appliedTo = appliedTo;
         this.stat = stat;
         this.baseLevel = baseLevel;
-        this.currentLevel = 1;
+        this.currentLevel = 0;
         this.maxLevel = maxLevel;
         this.baseCost = baseCost;
     }
@@ -26,7 +26,7 @@ public class Upgrade
     {
         get
         {
-            return Mathf.CeilToInt(baseCost * Mathf.Pow(2.3f, currentLevel - 1));
+            return Mathf.CeilToInt(baseCost * Mathf.Pow(2.3f, currentLevel));
         }
     }
 
@@ -46,13 +46,13 @@ public class Upgrade
     {
         if (CanLevelUp())
         {
-            currentLevel++;
             Debug.Log($"Upgrade {upgradeName} leveled up to {currentLevel}!");
 
             if (appliedTo == "Game")
             {
                 upgradeAction?.Invoke();
             }
+            currentLevel++;
         }
     }
     
