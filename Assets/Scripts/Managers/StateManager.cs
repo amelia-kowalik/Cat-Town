@@ -32,13 +32,15 @@ public class StateManager : MonoBehaviour
 
         GameManager.OnGameStarted += OnStartedGameplay;
         GameManager.OnStartAgainClicked += OnStartAgain;
+        GameManager.OnLostGame += HandleLostGame;
     }
 
     void OnDestroy()
     {
         GameManager.OnGameStarted -= OnStartedGameplay;
         GameManager.OnStartAgainClicked -= OnStartAgain;
-
+        GameManager.OnLostGame -= HandleLostGame;
+        
     }
 
     void Update()
@@ -77,5 +79,10 @@ public class StateManager : MonoBehaviour
     private void OnStartedGameplay()
     {
         ChangeState(GameState.Gameplay);
+    }
+
+    private void HandleLostGame()
+    {
+        ChangeState(GameState.Gameover);
     }
 }

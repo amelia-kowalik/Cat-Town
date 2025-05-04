@@ -7,6 +7,10 @@ public class PauseUI : MonoBehaviour
         GameManager.OnStateChanged(StateManager.GameState.Gameplay);
     }
 
+    public void Restart()
+    {
+        GameManager.OnStartAgainClicked?.Invoke();
+    }
     
     public void ExitGame()
     {

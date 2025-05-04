@@ -58,7 +58,7 @@ public class Cowboy : MonoBehaviour
     {
         if (Stats["health"] <= 0)
         {
-            //gameover
+            GameManager.OnLostGame?.Invoke();
         }
     }
 

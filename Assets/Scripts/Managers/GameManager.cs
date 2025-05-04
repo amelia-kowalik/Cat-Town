@@ -6,7 +6,9 @@ public class
 {
     public static Action OnCatKidnapped;
     public static Action OnCoyoteDeath;
-    public static Action<int> OnNextWave;q
+    public static Action OnLostGame;
+    public static Action<int> OnGoldChanged;
+    public static Action<int> OnNextWave;
     public static Action<int> OnFoodBought;
     public static Action<int,int> OnCatKidnappedChanged;
     public static Action OnGameStarted;
