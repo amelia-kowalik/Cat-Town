@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.SceneManagement;
 
 public class StateManager : MonoBehaviour
 {
@@ -30,11 +31,14 @@ public class StateManager : MonoBehaviour
         GameManager.OnStateChanged?.Invoke(currentState);
 
         GameManager.OnGameStarted += OnStartedGameplay;
+        GameManager.OnStartAgainClicked += OnStartAgain;
     }
 
     void OnDestroy()
     {
         GameManager.OnGameStarted -= OnStartedGameplay;
+        GameManager.OnStartAgainClicked -= OnStartAgain;
+
     }
 
     void Update()
@@ -65,6 +69,11 @@ public class StateManager : MonoBehaviour
         }
     }
 
+    private void OnStartAgain()
+    {
+        ChangeState(GameState.Gameplay);
+        SceneManager.LoadScene(0);
+    }
     private void OnStartedGameplay()
     {
         ChangeState(GameState.Gameplay);
