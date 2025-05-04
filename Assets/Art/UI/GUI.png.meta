@@ -797,13 +797,13 @@ TextureImporter:
       name: GUI_19
       rect:
         serializedVersion: 2
-        x: 80
-        y: 176
-        width: 32
-        height: 45
+        x: 98
+        y: 211
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
       customData: 
       outline: []
       physicsShape: []
@@ -1757,6 +1757,28 @@ TextureImporter:
       bones: []
       spriteID: 3a91a9cb46e3517c0800000000000000
       internalID: -4101303283269101149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_47
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 176
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac07bfd8311e4540b35f17288f42bcd
+      internalID: 8745378400841392125
       vertices: []
       indices: 
       edges: []

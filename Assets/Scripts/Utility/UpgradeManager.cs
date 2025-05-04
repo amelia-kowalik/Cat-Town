@@ -25,19 +25,19 @@ public class UpgradeManager : MonoBehaviour
     {
         //stat upgrades
         upgrades.Add(new Upgrade("Faster Walk", "Cowboy", "walkingSpeed", 3f, 2, 10));
-        upgrades.Add(new Upgrade("Better Pistol", "Cowboy", "baseDamage", 10f, 5, 10));
-        upgrades.Add(new Upgrade("Toughen Up", "Cowboy", "health", 100f, 3, 10));
+        upgrades.Add(new Upgrade("Better Pistol", "Cowboy", "baseDamage", 10f, 5, 20));
+        upgrades.Add(new Upgrade("Toughen Up", "Cowboy", "health", 100f, 3, 15));
         
         //other upgrades
-        Upgrade selfDefenseUpgrade = new Upgrade("Self Defense", "Game", "", 0f, 3, 10);
+        Upgrade selfDefenseUpgrade = new Upgrade("Self Defense", "Game", "", 0f, 3, 20);
         selfDefenseUpgrade.upgradeAction = TrainNpcs;
         upgrades.Add(selfDefenseUpgrade);
         
-        Upgrade catCowboysUpgrade = new Upgrade("Cat Cowboys", "Game", "", 0f, 3, 10);
+        Upgrade catCowboysUpgrade = new Upgrade("Cat Cowboys", "Game", "", 0f, 3, 25);
         catCowboysUpgrade.upgradeAction = TrainSniper;
         upgrades.Add(catCowboysUpgrade);
         
-        Upgrade expertUpgrade =new Upgrade("Expert", "Game", "", 0f, 1, 10);
+        Upgrade expertUpgrade =new Upgrade("Expert", "Game", "", 0f, 1, 200);
         expertUpgrade.upgradeAction = UnlockExpert;
         upgrades.Add(expertUpgrade);
         
