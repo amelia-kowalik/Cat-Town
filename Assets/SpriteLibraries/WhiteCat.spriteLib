@@ -1,0 +1,398 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: FrontWalk
+    m_Hash: 708961936
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme walk_12
+      m_Hash: 768351189
+      m_Sprite: {fileID: 6739268806775074727, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6739268806775074727, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_13
+      m_Hash: 449522499
+      m_Sprite: {fileID: 5726555248536364489, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5726555248536364489, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_14
+      m_Hash: 78626528
+      m_Sprite: {fileID: -5937569076806888899, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5937569076806888899, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_15
+      m_Hash: 866684534
+      m_Sprite: {fileID: -7828378468525905077, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7828378468525905077, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_16
+      m_Hash: 715251660
+      m_Sprite: {fileID: 2801705018187067533, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2801705018187067533, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_17
+      m_Hash: 497479514
+      m_Sprite: {fileID: 7481006568514245890, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7481006568514245890, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: BackWalk
+    m_Hash: 255749239
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme walk_18
+      m_Hash: 219804363
+      m_Sprite: {fileID: -3512676845283050578, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3512676845283050578, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_19
+      m_Hash: 975094365
+      m_Sprite: {fileID: -1512147965, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1512147965, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_20
+      m_Hash: 686762298
+      m_Sprite: {fileID: 1087420088, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1087420088, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_21
+      m_Hash: 535304620
+      m_Sprite: {fileID: -139282655, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -139282655, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_22
+      m_Hash: 115427350
+      m_Sprite: {fileID: 392934854, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 392934854, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_23
+      m_Hash: 837187712
+      m_Sprite: {fileID: -11549580, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -11549580, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: SideWalk
+    m_Hash: 787848572
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme walk_0
+      m_Hash: 335467496
+      m_Sprite: {fileID: 8261480698169741049, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8261480698169741049, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_1
+      m_Hash: 620356478
+      m_Sprite: {fileID: 6837380245038788243, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6837380245038788243, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_2
+      m_Hash: 1039184580
+      m_Sprite: {fileID: -7649001786063226431, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7649001786063226431, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_3
+      m_Hash: 183992914
+      m_Sprite: {fileID: 7580395699399481070, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7580395699399481070, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_4
+      m_Hash: 345184241
+      m_Sprite: {fileID: -3685066536997686556, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3685066536997686556, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    - m_Name: creme walk_5
+      m_Hash: 596911975
+      m_Sprite: {fileID: 7086387051644863370, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7086387051644863370, guid: 2b2ea57445ee28446b565ba19d3f1e54, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: FrontIdle
+    m_Hash: 1005857232
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme idle_12
+      m_Hash: 708778694
+      m_Sprite: {fileID: -448260781226657920, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -448260781226657920, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_13
+      m_Hash: 490220112
+      m_Sprite: {fileID: 4803263338975312331, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4803263338975312331, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_14
+      m_Hash: 56410099
+      m_Sprite: {fileID: -5254879088519167146, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5254879088519167146, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_15
+      m_Hash: 878415717
+      m_Sprite: {fileID: 6752503858208088194, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6752503858208088194, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_16
+      m_Hash: 760405727
+      m_Sprite: {fileID: -775692988795953552, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -775692988795953552, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_17
+      m_Hash: 441839177
+      m_Sprite: {fileID: -7136469457148395805, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7136469457148395805, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: BlackIdle
+    m_Hash: 20460309
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme idle_18
+      m_Hash: 183170008
+      m_Sprite: {fileID: -5582993709468973030, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5582993709468973030, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_19
+      m_Hash: 1038992206
+      m_Sprite: {fileID: -255247657390664537, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -255247657390664537, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_20
+      m_Hash: 790374441
+      m_Sprite: {fileID: -3597726572567994677, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3597726572567994677, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_21
+      m_Hash: 404428991
+      m_Sprite: {fileID: -606060085600384298, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -606060085600384298, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_22
+      m_Hash: 17975557
+      m_Sprite: {fileID: -26974943561557448, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -26974943561557448, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_23
+      m_Hash: 907377043
+      m_Sprite: {fileID: -330087407, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -330087407, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: SideIdle
+    m_Hash: 1061179964
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme idle_0
+      m_Hash: 677122681
+      m_Sprite: {fileID: 6080491115169374816, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6080491115169374816, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_1
+      m_Hash: 526066415
+      m_Sprite: {fileID: 4367918764655229657, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4367918764655229657, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_2
+      m_Hash: 106066773
+      m_Sprite: {fileID: 6005288808424604882, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6005288808424604882, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_3
+      m_Hash: 827671491
+      m_Sprite: {fileID: -7785131775771237608, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7785131775771237608, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_4
+      m_Hash: 791795296
+      m_Sprite: {fileID: 1819918779642473213, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1819918779642473213, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    - m_Name: creme idle_5
+      m_Hash: 406251254
+      m_Sprite: {fileID: 367578246440785015, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 367578246440785015, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: FrontAttack
+    m_Hash: 150255247
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme fight_12
+      m_Hash: 470760538
+      m_Sprite: {fileID: -572936938054927212, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -572936938054927212, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_13
+      m_Hash: 721947852
+      m_Sprite: {fileID: -5863735307634462922, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5863735307634462922, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_14
+      m_Hash: 896309615
+      m_Sprite: {fileID: 8642991027510879109, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8642991027510879109, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_15
+      m_Hash: 40610297
+      m_Sprite: {fileID: 6991565262160417204, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6991565262160417204, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_16
+      m_Hash: 459470915
+      m_Sprite: {fileID: 8317403555596308046, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8317403555596308046, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_17
+      m_Hash: 744868053
+      m_Sprite: {fileID: -3513398401639092341, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3513398401639092341, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: BackAttack
+    m_Hash: 346430693
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme fight_18
+      m_Hash: 1020974404
+      m_Sprite: {fileID: 2991501844830504116, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2991501844830504116, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_19
+      m_Hash: 199091666
+      m_Sprite: {fileID: 493758589254218675, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 493758589254218675, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_20
+      m_Hash: 422317749
+      m_Sprite: {fileID: -453636430, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -453636430, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_21
+      m_Hash: 774585891
+      m_Sprite: {fileID: 163440151, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 163440151, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_22
+      m_Hash: 925003673
+      m_Sprite: {fileID: -972007098, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -972007098, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_23
+      m_Hash: 2449167
+      m_Sprite: {fileID: -317580168, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -317580168, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: SideAttack
+    m_Hash: 1038624367
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme fight_0
+      m_Hash: 70983225
+      m_Sprite: {fileID: -3148775783963152710, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3148775783963152710, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_1
+      m_Hash: 859582127
+      m_Sprite: {fileID: 2587073286332722278, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2587073286332722278, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_2
+      m_Hash: 708149013
+      m_Sprite: {fileID: -3514555285939313935, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3514555285939313935, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_3
+      m_Hash: 489836419
+      m_Sprite: {fileID: -6150354085064465158, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6150354085064465158, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_4
+      m_Hash: 56023584
+      m_Sprite: {fileID: 3401812654205240584, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3401812654205240584, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    - m_Name: creme fight_5
+      m_Hash: 877783734
+      m_Sprite: {fileID: 8910416965372450269, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8910416965372450269, guid: 894a961c36046ff439ef81314c40b2c0, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: Death
+    m_Hash: 646380074
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: creme death_20
+      m_Hash: 892277253
+      m_Sprite: {fileID: -7660688235002521358, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7660688235002521358, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_21
+      m_Hash: 36184723
+      m_Sprite: {fileID: -2177860914241176985, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2177860914241176985, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_22
+      m_Hash: 455177001
+      m_Sprite: {fileID: 8624606876463520024, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8624606876463520024, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_23
+      m_Hash: 740705215
+      m_Sprite: {fileID: -7518738985334531611, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7518738985334531611, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_24
+      m_Hash: 843240988
+      m_Sprite: {fileID: -8549422897803365718, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8549422897803365718, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_25
+      m_Hash: 88467082
+      m_Sprite: {fileID: -7184360349334718512, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7184360349334718512, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_26
+      m_Hash: 474789680
+      m_Sprite: {fileID: 5281415513883848811, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5281415513883848811, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_27
+      m_Hash: 726370214
+      m_Sprite: {fileID: -3339280215595288908, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3339280215595288908, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_28
+      m_Hash: 1005886007
+      m_Sprite: {fileID: -5271439384648809209, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5271439384648809209, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    - m_Name: creme death_29
+      m_Hash: 217295521
+      m_Sprite: {fileID: -3013115895235157179, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3013115895235157179, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638820520411898822
+  m_Version: 1

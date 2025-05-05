@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CowboyAttack : MonoBehaviour
@@ -6,7 +7,13 @@ public class CowboyAttack : MonoBehaviour
     public float bulletSpeed = 5f;
     public float timeToDestroy = 2f;
     private Vector2 facingDirection;
-    // Update is called once per frame
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+    
     void Update()
     {
         Vector2 movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -14,12 +21,20 @@ public class CowboyAttack : MonoBehaviour
         {
             facingDirection = movementInput.normalized;
         }
-        
-        if (Input.GetKeyDown(KeyCode.Space)) Shoot();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
+            Shoot();
+        }
     }
     
     public void Shoot()
     {
+        animator.SetBool("isAttacking", true);
+        animator.SetFloat("LastInputX", facingDirection.x);
+        animator.SetFloat("LastInputY", facingDirection.y);
+        
         Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y) + facingDirection * 0.5f;
         GameObject spawnedBullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
         Vector2 bulletDirection = facingDirection * bulletSpeed;
@@ -32,8 +47,12 @@ public class CowboyAttack : MonoBehaviour
         {
             bulletScript.Init(cowboy.GetDamage(),gameObject);
         }
-            
-            
+        
         Destroy(spawnedBullet, timeToDestroy);
+    }
+
+    public void EndAttack()
+    {
+        animator.SetBool("isAttacking", false);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class 
     GameManager : MonoBehaviour
 {
+    public static Action<float, float> OnHealthChanged;
     public static Action OnCatKidnapped;
     public static Action OnCoyoteDeath;
     public static Action OnLostGame;

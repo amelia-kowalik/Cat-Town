@@ -1,0 +1,398 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: FrontWalk
+    m_Hash: 708961936
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige walk_12
+      m_Hash: 248843870
+      m_Sprite: {fileID: 3695242448762772783, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3695242448762772783, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_13
+      m_Hash: 970079944
+      m_Sprite: {fileID: 7672611570696608248, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7672611570696608248, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_14
+      m_Hash: 666282859
+      m_Sprite: {fileID: -2276054541537600817, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2276054541537600817, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_15
+      m_Hash: 280075261
+      m_Sprite: {fileID: 8963252324085003665, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8963252324085003665, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_16
+      m_Hash: 163105351
+      m_Sprite: {fileID: 6052003749984730525, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6052003749984730525, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_17
+      m_Hash: 1052768977
+      m_Sprite: {fileID: 7273435252184977996, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7273435252184977996, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: BackWalk
+    m_Hash: 255749239
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige walk_18
+      m_Hash: 771811136
+      m_Sprite: {fileID: 493401349356353235, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 493401349356353235, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_19
+      m_Hash: 419944406
+      m_Sprite: {fileID: -5221844640022042076, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5221844640022042076, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_20
+      m_Hash: 200686769
+      m_Sprite: {fileID: 2798066471707585816, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2798066471707585816, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_21
+      m_Hash: 1022430247
+      m_Sprite: {fileID: -4989956013093104221, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4989956013093104221, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_22
+      m_Hash: 637033885
+      m_Sprite: {fileID: -2529821655346264269, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2529821655346264269, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_23
+      m_Hash: 318729483
+      m_Sprite: {fileID: -3065319291010445893, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3065319291010445893, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: SideWalk
+    m_Hash: 787848572
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige walk_0
+      m_Hash: 921382026
+      m_Sprite: {fileID: -3433929629992425357, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3433929629992425357, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_1
+      m_Hash: 32250908
+      m_Sprite: {fileID: 747729766059691302, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 747729766059691302, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_2
+      m_Hash: 417680806
+      m_Sprite: {fileID: 239959973994058990, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 239959973994058990, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_3
+      m_Hash: 803372336
+      m_Sprite: {fileID: -4694739365789176679, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4694739365789176679, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_4
+      m_Hash: 830924947
+      m_Sprite: {fileID: -1934321808903439932, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1934321808903439932, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    - m_Name: scottishfold beige walk_5
+      m_Hash: 109172741
+      m_Sprite: {fileID: 7826443644197488491, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7826443644197488491, guid: 17e4c7232964aef41848d171ae3cb51f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: FrontIdle
+    m_Hash: 1005857232
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige idle_12
+      m_Hash: 153489229
+      m_Sprite: {fileID: -8457628998953107127, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8457628998953107127, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_13
+      m_Hash: 1042366427
+      m_Sprite: {fileID: 116673108438134311, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 116673108438134311, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_14
+      m_Hash: 541436536
+      m_Sprite: {fileID: -5701700311088166665, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5701700311088166665, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_15
+      m_Hash: 390241006
+      m_Sprite: {fileID: -1017187070481428806, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1017187070481428806, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_16
+      m_Hash: 239848276
+      m_Sprite: {fileID: -6994499982264644688, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6994499982264644688, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_17
+      m_Hash: 961346498
+      m_Sprite: {fileID: 3921517645607521147, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3921517645607521147, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: BackIdle
+    m_Hash: 512467767
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige idle_18
+      m_Hash: 703850067
+      m_Sprite: {fileID: -1122616635336818784, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1122616635336818784, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_19
+      m_Hash: 519362245
+      m_Sprite: {fileID: 333145396653989110, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 333145396653989110, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_20
+      m_Hash: 201670050
+      m_Sprite: {fileID: 5836451747906246837, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5836451747906246837, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_21
+      m_Hash: 989990196
+      m_Sprite: {fileID: -8995657371196315559, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8995657371196315559, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_22
+      m_Hash: 571169934
+      m_Sprite: {fileID: -6106925266313158558, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6106925266313158558, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_23
+      m_Hash: 353135640
+      m_Sprite: {fileID: -8671260019394449227, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8671260019394449227, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: SideIdle
+    m_Hash: 1061179964
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige idle_0
+      m_Hash: 222948635
+      m_Sprite: {fileID: 6596705170066626849, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6596705170066626849, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_1
+      m_Hash: 978247053
+      m_Sprite: {fileID: -1878656614294604966, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1878656614294604966, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_2
+      m_Hash: 591891511
+      m_Sprite: {fileID: -5952057624802830537, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5952057624802830537, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_3
+      m_Hash: 339786913
+      m_Sprite: {fileID: -3196457316744421962, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3196457316744421962, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_4
+      m_Hash: 170141954
+      m_Sprite: {fileID: -336793614531668781, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -336793614531668781, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    - m_Name: scottishfold beige idle_5
+      m_Hash: 1025710484
+      m_Sprite: {fileID: 8762118867630736349, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8762118867630736349, guid: 9ead27c37ea22fb4a967e9e46003e0dd, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: FrontAttack
+    m_Hash: 150255247
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige fight_12
+      m_Hash: 650543079
+      m_Sprite: {fileID: 5090824673268641322, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5090824673268641322, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_13
+      m_Hash: 297881457
+      m_Sprite: {fileID: -5342737310006356018, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5342737310006356018, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_14
+      m_Hash: 262527698
+      m_Sprite: {fileID: -7637590678414774236, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7637590678414774236, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_15
+      m_Hash: 950200900
+      m_Sprite: {fileID: -9019358291434168908, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -9019358291434168908, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_16
+      m_Hash: 564902910
+      m_Sprite: {fileID: 7706003913562834032, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7706003913562834032, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_17
+      m_Hash: 380406632
+      m_Sprite: {fileID: -8880442753937363736, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8880442753937363736, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: BackAttack
+    m_Hash: 346430693
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige fight_18
+      m_Hash: 101947129
+      m_Sprite: {fileID: -1971657055527065393, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1971657055527065393, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_19
+      m_Hash: 823436911
+      m_Sprite: {fileID: -3112745824538367043, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3112745824538367043, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_20
+      m_Hash: 602230024
+      m_Sprite: {fileID: -7243995734379696172, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7243995734379696172, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_21
+      m_Hash: 350387614
+      m_Sprite: {fileID: -1032977079093110581, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1032977079093110581, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_22
+      m_Hash: 233516068
+      m_Sprite: {fileID: 7215526023436907129, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7215526023436907129, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_23
+      m_Hash: 988552370
+      m_Sprite: {fileID: 2834839776298354717, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2834839776298354717, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: SideAttack
+    m_Hash: 1038624367
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige fight_0
+      m_Hash: 656542642
+      m_Sprite: {fileID: 1888107477078504765, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1888107477078504765, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_1
+      m_Hash: 270875428
+      m_Sprite: {fileID: -9048996290980683165, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -9048996290980683165, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_2
+      m_Hash: 153905822
+      m_Sprite: {fileID: -610233676033273399, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -610233676033273399, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_3
+      m_Hash: 1043028488
+      m_Sprite: {fileID: 8250159090156246823, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8250159090156246823, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_4
+      m_Hash: 542101419
+      m_Sprite: {fileID: -3295836169337968548, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3295836169337968548, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    - m_Name: scottishfold beige fight_5
+      m_Hash: 390659901
+      m_Sprite: {fileID: 3247748158012941313, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3247748158012941313, guid: ed1e7109bb5af124380d682230e27b74, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: Death
+    m_Hash: 646380074
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: scottishfold beige death_20
+      m_Hash: 266752440
+      m_Sprite: {fileID: -3553819188229295549, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3553819188229295549, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_21
+      m_Hash: 954294574
+      m_Sprite: {fileID: -5854706634610657981, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5854706634610657981, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_22
+      m_Hash: 568864916
+      m_Sprite: {fileID: -3076443327822489633, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3076443327822489633, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_23
+      m_Hash: 384761858
+      m_Sprite: {fileID: -4053889953193405184, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4053889953193405184, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_24
+      m_Hash: 143365537
+      m_Sprite: {fileID: 883556431479397107, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 883556431479397107, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_25
+      m_Hash: 1066181943
+      m_Sprite: {fileID: -4243220693079172131, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4243220693079172131, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_26
+      m_Hash: 646313101
+      m_Sprite: {fileID: -5218246743320159298, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5218246743320159298, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_27
+      m_Hash: 293782555
+      m_Sprite: {fileID: -4892306235398880256, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4892306235398880256, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_28
+      m_Hash: 20830602
+      m_Sprite: {fileID: -6214069025847828830, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6214069025847828830, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    - m_Name: scottishfold beige death_29
+      m_Hash: 909830428
+      m_Sprite: {fileID: 2754213921868039613, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2754213921868039613, guid: 95da400045459d64c97bbb2c2fd76bd6, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638820519777261288
+  m_Version: 1

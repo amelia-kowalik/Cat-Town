@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class CoyoteAttack : BaseAttack
 {
-    public static Action OnCatKidnapped;
-
+    
     protected override float FireRate => 1f;
     protected override float Range => 3f;
     protected override float BulletSpeed => 5f;
@@ -36,7 +35,7 @@ public class CoyoteAttack : BaseAttack
     {
         Debug.Log("Kidnapped Cat");
         npc.SetActive(false);
-        OnCatKidnapped?.Invoke();
+        GameManager.OnCatKidnapped?.Invoke();
     }
 
 }

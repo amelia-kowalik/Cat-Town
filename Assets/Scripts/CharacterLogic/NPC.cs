@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    private int lives = 1;
+    private int _lives = 1;
     
     void Update()
     {
@@ -12,13 +12,13 @@ public class NPC : MonoBehaviour
 
     public void updateLives(int chancesToPunch)
     {
-        lives = chancesToPunch;
+        _lives = chancesToPunch;
     }
     
     private void PunchCoyote(GameObject other)
     {
         Coyote coyote = other.GetComponent<Coyote>();
-        
+        Debug.Log("Cat punched a coyote");
         coyote.TakeDamage(10);
         
         //punching animation
@@ -28,10 +28,10 @@ public class NPC : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if (lives > 1)
+            if (_lives > 1)
             {
                 PunchCoyote(other.gameObject);
-                lives--; 
+                _lives--; 
             }
             else
             {

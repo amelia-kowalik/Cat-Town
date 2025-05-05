@@ -7,7 +7,7 @@ public class HUD : MonoBehaviour
     [SerializeField] private Cowboy cowboy;
     void Start()
     {
-        cowboy.OnHealthChanged += (cur,max) => hudUI.UpdateHealth(cur, max);
+        GameManager.OnHealthChanged += (cur,max) => hudUI.UpdateHealth(cur, max);
         hudUI.UpdateHealth(cowboy.Stats["health"], cowboy.Stats["maxHealth"]);
         
         GameManager.OnGoldChanged += hudUI.UpdateGold;

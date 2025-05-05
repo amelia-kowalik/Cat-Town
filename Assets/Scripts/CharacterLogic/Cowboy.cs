@@ -6,17 +6,19 @@ using Random = UnityEngine.Random;
 
 public class Cowboy : MonoBehaviour
 {
-    public event Action<float, float> OnHealthChanged;
+    
 
     public Dictionary<string,float> Stats { get; set; }
     [SerializeField, ReadOnly] private float currentHealth;
+    private Animator animator;
 
-    private void OnEnable()
+    private void Start()
     {
+        animator = GetComponent<Animator>();
         GameManager.OnFoodBought += Heal;
     }
     
-    private void OnDisable()
+    private void OnDestroy()
     {
         GameManager.OnFoodBought -= Heal;
     }
@@ -44,22 +46,26 @@ public class Cowboy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        animator.SetTrigger("Hurt");
+        
         Stats["health"] -= damage;
-        OnHealthChanged?.Invoke(Stats["health"], Stats["maxHealth"]);
+        GameManager.OnHealthChanged?.Invoke(Stats["health"], Stats["maxHealth"]);
+        
+        if (Stats["health"] <= 0)
+        {
+            animator.SetBool("isDead", true);
+        }
     }
 
     public void Heal(int heal)
     {
         Stats["health"] = Mathf.Min(Stats["health"] + heal, Stats["maxHealth"]);
-        OnHealthChanged?.Invoke(Stats["health"], Stats["maxHealth"]);
+        GameManager.OnHealthChanged?.Invoke(Stats["health"], Stats["maxHealth"]);
     }
 
     public void CowboyDeath()
     {
-        if (Stats["health"] <= 0)
-        {
-            GameManager.OnLostGame?.Invoke();
-        }
+        GameManager.OnLostGame?.Invoke();
     }
 
     public int GetDamage()

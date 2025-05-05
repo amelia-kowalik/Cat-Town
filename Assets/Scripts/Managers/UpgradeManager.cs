@@ -26,7 +26,7 @@ public class UpgradeManager : MonoBehaviour
         //stat upgrades
         upgrades.Add(new Upgrade("Faster Walk", "Cowboy", "walkingSpeed", 3f, 2, 10));
         upgrades.Add(new Upgrade("Better Pistol", "Cowboy", "baseDamage", 10f, 5, 20));
-        upgrades.Add(new Upgrade("Toughen Up", "Cowboy", "health", 100f, 3, 15));
+        upgrades.Add(new Upgrade("Toughen Up", "Cowboy", "maxHealth", 100f, 3, 15));
         
         //other upgrades
         Upgrade selfDefenseUpgrade = new Upgrade("Self Defense", "Game", "", 0f, 3, 20);
@@ -52,7 +52,9 @@ public class UpgradeManager : MonoBehaviour
             
             if (upgrade.stat == "maxHealth")
             {
+                cowboy.Stats["health"] += upgrade.Amount;
                 cowboy.Stats["health"] = Mathf.Min(cowboy.Stats["health"], cowboy.Stats["maxHealth"]);
+                GameManager.OnHealthChanged?.Invoke(cowboy.Stats["health"], cowboy.Stats["maxHealth"]);
             }
         }
     }
