@@ -8,10 +8,17 @@ public class CoyoteAttack : BaseAttack
     protected override float Range => 3f;
     protected override float BulletSpeed => 5f;
 
-    
-    
+    private Animator _animator;
+
+    void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     public override void TryShoot(GameObject target)
     {
+        _animator.SetBool("isAttacking", true);
+        
         if (fireCooldown > 0f) return;
 
         Vector2 direction = (target.transform.position - transform.position).normalized;
@@ -21,7 +28,11 @@ public class CoyoteAttack : BaseAttack
 
         fireCooldown = 1f / FireRate;
     }
-    
+
+    public void EndCoyoteAttack()
+    {
+        _animator.SetBool("isAttacking", false);
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
