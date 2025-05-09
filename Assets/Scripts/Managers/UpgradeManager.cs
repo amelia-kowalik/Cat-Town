@@ -129,7 +129,7 @@ public class UpgradeManager : MonoBehaviour
         NPC[] npcs = FindObjectsByType<NPC>(FindObjectsSortMode.None);
         foreach (var npc in npcs)
         {
-            npc.updateLives(chancesToPunch); 
+            npc.UpdateLives(chancesToPunch); 
             Debug.Log($"Updated NPC lives to {chancesToPunch}");
         }
     }

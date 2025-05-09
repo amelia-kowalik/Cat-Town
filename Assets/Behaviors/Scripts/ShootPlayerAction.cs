@@ -9,11 +9,12 @@ using Unity.Properties;
 public partial class ShootPlayerAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Self;
-    [SerializeReference] public BlackboardVariable<GameObject> Player;
+    [SerializeReference] public GameObject player;
 
     protected override Status OnStart()
     {
-        if (Player.Value == null)
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
         {
             LogFailure("No agent assigned.");
             return Status.Failure;
@@ -37,13 +38,13 @@ public partial class ShootPlayerAction : Action
             return Status.Failure;
         }
 
-        if (!attack.InRange(Player.Value) || !attack.InSight(Player.Value))
+        if (!attack.InRange(player) || !attack.InSight(player))
         {
             return Status.Running;
         }
         
         //Debug.Log("Player is in range");
-        attack.TryShoot(Player.Value);
+        attack.TryShoot(player);
         
         return Status.Running;
     }

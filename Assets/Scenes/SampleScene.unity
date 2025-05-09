@@ -82330,6 +82330,9 @@ GameObject:
   - component: {fileID: 628791750}
   - component: {fileID: 628791749}
   - component: {fileID: 628791755}
+  - component: {fileID: 628791758}
+  - component: {fileID: 628791757}
+  - component: {fileID: 628791756}
   m_Layer: 0
   m_Name: NPCBrownCat
   m_TagString: NPC
@@ -82553,6 +82556,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72736ade0cc4314a8cfaef496b4b6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &628791756
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628791748}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63cc912fa26ba254d9a7c3d0b818fd15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &628791757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628791748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 0
+--- !u!114 &628791758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628791748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 9a580545e0e2ae2439e69a2b40afc495, type: 3}
 --- !u!1 &632673236
 GameObject:
   m_ObjectHideFlags: 0
@@ -83607,6 +83662,9 @@ GameObject:
   - component: {fileID: 719907013}
   - component: {fileID: 719907012}
   - component: {fileID: 719907011}
+  - component: {fileID: 719907020}
+  - component: {fileID: 719907019}
+  - component: {fileID: 719907018}
   m_Layer: 0
   m_Name: NPCBlackCat2
   m_TagString: NPC
@@ -83831,6 +83889,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1723948963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &719907018
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719907010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63cc912fa26ba254d9a7c3d0b818fd15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &719907019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719907010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 7f951bb90ee5dbe4eb4a9c733253ae0e, type: 3}
+--- !u!114 &719907020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719907010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 0
 --- !u!1 &726746939
 GameObject:
   m_ObjectHideFlags: 0
@@ -90153,6 +90263,9 @@ GameObject:
   - component: {fileID: 934771458}
   - component: {fileID: 934771457}
   - component: {fileID: 934771456}
+  - component: {fileID: 934771465}
+  - component: {fileID: 934771464}
+  - component: {fileID: 934771463}
   m_Layer: 0
   m_Name: NPCWhiteCat2
   m_TagString: NPC
@@ -90350,7 +90463,7 @@ SpriteRenderer:
   m_SortingLayerID: -878333607
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -448260781226657920, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
+  m_Sprite: {fileID: -775692988795953552, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90376,6 +90489,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1723948963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &934771463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934771455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 0
+--- !u!114 &934771464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934771455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 1e301887d8f46334981ca3e59585ad2c, type: 3}
+--- !u!95 &934771465
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934771455}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63cc912fa26ba254d9a7c3d0b818fd15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &938202020
 GameObject:
   m_ObjectHideFlags: 0
@@ -91523,6 +91688,9 @@ GameObject:
   - component: {fileID: 1041707632}
   - component: {fileID: 1041707631}
   - component: {fileID: 1041707637}
+  - component: {fileID: 1041707640}
+  - component: {fileID: 1041707639}
+  - component: {fileID: 1041707638}
   m_Layer: 0
   m_Name: NPCBlackCat
   m_TagString: NPC
@@ -91747,6 +91915,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72736ade0cc4314a8cfaef496b4b6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1041707638
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041707630}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63cc912fa26ba254d9a7c3d0b818fd15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1041707639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041707630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0.0074512735
+  m_labelHash: 0.0000001959452
+  m_SpriteKey: 0
+  m_SpriteHash: 816868578
+--- !u!114 &1041707640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041707630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 7f951bb90ee5dbe4eb4a9c733253ae0e, type: 3}
 --- !u!1 &1044271632
 GameObject:
   m_ObjectHideFlags: 0
@@ -97739,7 +97959,7 @@ SpriteRenderer:
   m_SortingLayerID: -878333607
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7660688235002521358, guid: 957b1ba28ef574c44aab864dfe041b9c, type: 3}
+  m_Sprite: {fileID: -448260781226657920, guid: 967ad0be8c76cd240870c64fc2e9f6be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97818,10 +98038,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 9.365925e-16
-  m_labelHash: 0.000000652188
+  m_CategoryHash: 0.0074512735
+  m_labelHash: 1.6973497e-13
   m_SpriteKey: 0
-  m_SpriteHash: 171183852
+  m_SpriteHash: 786240294
 --- !u!114 &1528165749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103791,6 +104011,9 @@ GameObject:
   - component: {fileID: 2037189003}
   - component: {fileID: 2037189002}
   - component: {fileID: 2037189008}
+  - component: {fileID: 2037189011}
+  - component: {fileID: 2037189010}
+  - component: {fileID: 2037189009}
   m_Layer: 0
   m_Name: NPCGreyCat
   m_TagString: NPC
@@ -104016,6 +104239,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72736ade0cc4314a8cfaef496b4b6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2037189009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037189001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0.0074512735
+  m_labelHash: 2.4868135e-28
+  m_SpriteKey: 0
+  m_SpriteHash: 213790710
+--- !u!95 &2037189010
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037189001}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63cc912fa26ba254d9a7c3d0b818fd15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2037189011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037189001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 3e964ff2fc25dc442b5d1dc2660a571a, type: 3}
 --- !u!1 &2048787353
 GameObject:
   m_ObjectHideFlags: 0
