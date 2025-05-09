@@ -11,7 +11,7 @@ public class Coyote : MonoBehaviour
     private const string MoveY = "MoveY";
     
     [SerializeField] private int health = 30;
-    [SerializeField] private int baseDamage = 10;
+    [SerializeField] private int baseDamage = 5;
     private Animator _animator;
     private NavMeshAgent _agent;
     private SpriteRenderer _spriteRenderer;
@@ -75,7 +75,7 @@ public class Coyote : MonoBehaviour
 
     public int GetDamage()
     {
-        int randomDamage = Random.Range(baseDamage, 20);
+        int randomDamage = Random.Range(baseDamage, 12);
         return randomDamage;
     }
     

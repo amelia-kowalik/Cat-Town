@@ -14,14 +14,16 @@ public class StateManager : MonoBehaviour
         Menu,
         Gameplay,
         Pause,
-        Gameover
+        Gameover,
+        Victory
     }
     private Dictionary<GameState, List<GameState>> stateTransitions = new()
     {
         {GameState.Menu, new List<GameState>() { GameState.Gameplay }},
-        { GameState.Gameplay , new List<GameState>() { GameState.Pause, GameState.Gameover}},
+        { GameState.Gameplay , new List<GameState>() { GameState.Pause, GameState.Gameover, GameState.Victory}},
         { GameState.Pause, new List<GameState>() { GameState.Gameplay }},
-        { GameState.Gameover, new List<GameState>() { GameState.Menu }}
+        { GameState.Gameover, new List<GameState>() { GameState.Menu }},
+        { GameState.Victory, new List<GameState>() { GameState.Menu }},
     };
 
     void Start()
@@ -32,6 +34,7 @@ public class StateManager : MonoBehaviour
         GameManager.OnGameStarted += OnStartedGameplay;
         GameManager.OnStartAgainClicked += OnStartAgain;
         GameManager.OnLostGame += HandleLostGame;
+        GameManager.OnWonGame += HandleWonGame;
     }
 
     void OnDestroy()
@@ -39,6 +42,7 @@ public class StateManager : MonoBehaviour
         GameManager.OnGameStarted -= OnStartedGameplay;
         GameManager.OnStartAgainClicked -= OnStartAgain;
         GameManager.OnLostGame -= HandleLostGame;
+        GameManager.OnWonGame -= HandleWonGame;
         
     }
 
@@ -83,5 +87,10 @@ public class StateManager : MonoBehaviour
     private void HandleLostGame()
     {
         ChangeState(GameState.Gameover);
+    }
+    
+    private void HandleWonGame()
+    {
+        ChangeState(GameState.Victory);
     }
 }

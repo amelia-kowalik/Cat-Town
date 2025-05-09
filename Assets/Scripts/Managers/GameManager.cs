@@ -7,7 +7,9 @@ public class
     public static Action<float, float> OnHealthChanged;
     public static Action OnCatKidnapped;
     public static Action OnCoyoteDeath;
+    public static Action OnBossDeath;
     public static Action OnLostGame;
+    public static Action OnWonGame;
     public static Action<int> OnGoldChanged;
     public static Action<int> OnNextWave;
     public static Action<int> OnFoodBought;
@@ -34,7 +36,8 @@ public class
     public UIManager UIManager => uiManager;
     public UpgradeManager UpgradeManager => upgradeManager;
     public WaveManager WaveManager => waveManager;
-    
+
+    private bool bossDefeated = false;
     
     void Awake()
     {
@@ -45,5 +48,31 @@ public class
         {
             Destroy(gameObject); 
         }
+    }
+
+    private void Start()
+    {
+        OnNextWave += CheckWin;
+        OnBossDeath += () => bossDefeated = true;
+    }
+
+    private void OnDestroy()
+    {
+        OnNextWave -= CheckWin;
+        OnBossDeath -= () => bossDefeated = true;
+    }
+
+    private void CheckWin(int currentWave)
+    {
+        bool allCoyotesDefeated = FindObjectsOfType<Coyote>().Length == 0;
+        if (currentWave == 10 && bossDefeated && allCoyotesDefeated )
+        {
+            HandleWin();
+        }
+    }
+
+    private void HandleWin()
+    {
+        OnWonGame?.Invoke();
     }
 }

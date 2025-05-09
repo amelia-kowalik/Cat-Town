@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] screens; //[ Menu, Gameplay, Pause, GameOver]
+    [SerializeField] private GameObject[] screens; //[ Menu, Gameplay, Pause, GameOver, Victory]
     
     void Start()
     {
@@ -33,6 +33,10 @@ public class UIManager : MonoBehaviour
             case StateManager.GameState.Gameover:
                 Time.timeScale = 0;
                 ShowGameOverScreen();
+                break;
+            case StateManager.GameState.Victory:
+                Time.timeScale = 0;
+                ShowVictoryScreen();
                 break;
             default:
                 Debug.Log("Unknown state");
@@ -66,6 +70,11 @@ public class UIManager : MonoBehaviour
     private void ShowGameOverScreen()
     {
         ShowScreen(3);
+    }
+    
+    private void ShowVictoryScreen()
+    {
+        ShowScreen(4);
     }
 }
 

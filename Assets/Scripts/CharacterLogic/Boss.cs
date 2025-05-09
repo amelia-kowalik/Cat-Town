@@ -19,6 +19,7 @@ public class Boss : MonoBehaviour
     {
         Destroy(gameObject);
         GameManager.OnCoyoteDeath?.Invoke();
+        GameManager.OnBossDeath?.Invoke();
     }
 
     public int GetDamage()
