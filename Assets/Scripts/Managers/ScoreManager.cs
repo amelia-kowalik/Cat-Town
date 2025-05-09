@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance { get; private set; }
     
     [SerializeField] private int gold;
     [SerializeField] private int catKidnapLimit = 3;
@@ -11,16 +10,6 @@ public class ScoreManager : MonoBehaviour
     private bool _limitReached;
     private int _currentWave;
     
-
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
     
     void Start()
     {

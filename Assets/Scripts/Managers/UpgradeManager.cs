@@ -16,23 +16,13 @@ public class UpgradeManager : MonoBehaviour
     private const string MaxHealthStat = "maxHealth";
     private const string HealthStat = "health";
     private const string Game = "Game";
-
-    public static UpgradeManager Instance { get; private set; }
+    
     [SerializeField] private Cowboy cowboy;
     [SerializeField] private GameObject expert;
     [SerializeField] private GameObject[] snipers;
 
     public List<Upgrade> upgrades = new List<Upgrade>();
-
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
+    
     
     void Start()
     {
@@ -124,7 +114,7 @@ public class UpgradeManager : MonoBehaviour
             return false;
         }
 
-        if (ScoreManager.Instance.SpendGold(upgradeToBuy.cost))
+        if (GameManager.Instance.ScoreManager.SpendGold(upgradeToBuy.cost))
         {
             LevelUpUpgrade(upgradeName);
             return true;

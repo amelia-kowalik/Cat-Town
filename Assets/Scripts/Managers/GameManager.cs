@@ -16,13 +16,34 @@ public class
     public static Action OnGameOver;
     public static Action OnStartAgainClicked;
     public static Action<StateManager.GameState> OnStateChanged;
-    void Start()
+    
+    public static GameManager Instance { get; private set; }
+    
+    [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private HealthManager healthManager;
+    [SerializeField] private SpawnManager spawnManager;
+    [SerializeField] private StateManager stateManager;
+    [SerializeField] private UIManager uiManager;
+    [SerializeField] private UpgradeManager upgradeManager;
+    [SerializeField] private WaveManager waveManager;
+    
+    public ScoreManager ScoreManager => scoreManager;
+    public HealthManager HealthManager => healthManager;
+    public SpawnManager SpawnManager => spawnManager;
+    public StateManager StateManager => stateManager;
+    public UIManager UIManager => uiManager;
+    public UpgradeManager UpgradeManager => upgradeManager;
+    public WaveManager WaveManager => waveManager;
+    
+    
+    void Awake()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        if (Instance == null)
+        {
+            Instance = this; }
+        else
+        {
+            Destroy(gameObject); 
+        }
     }
 }

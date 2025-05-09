@@ -20,7 +20,7 @@ public class FoodItem : MonoBehaviour
 
     public void BuyFood()
     {
-        bool success = HealthManager.Instance.BuyFood(healthAdded, price);
+        bool success = GameManager.Instance.HealthManager.BuyFood(healthAdded, price);
 
         if (success)
         {
@@ -37,8 +37,8 @@ public class FoodItem : MonoBehaviour
         healthAddedText.text = $"+{healthAdded}";
         priceText.text = $"{price}";
         
-        bool canBuy = ScoreManager.Instance.GetGold() >= price;
-        bool isDamaged = HealthManager.Instance.CanBuyFood();
+        bool canBuy = GameManager.Instance.ScoreManager.GetGold() >= price;
+        bool isDamaged = GameManager.Instance.HealthManager.CanBuyFood();
         
         buyButton.interactable = canBuy && isDamaged;
     }

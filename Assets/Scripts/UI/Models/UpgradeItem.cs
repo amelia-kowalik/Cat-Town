@@ -16,7 +16,7 @@ public class UpgradeItem : MonoBehaviour
 
     public void BuyUpgrade()
     {
-        bool success = UpgradeManager.Instance.BuyUpgrade(upgradeName);
+        bool success = GameManager.Instance.UpgradeManager.BuyUpgrade(upgradeName);
 
         if (success)
         {
@@ -30,7 +30,7 @@ public class UpgradeItem : MonoBehaviour
     
     public void UpdateUI()
     {
-        Upgrade upgrade = UpgradeManager.Instance.upgrades.Find(x => x.upgradeName == upgradeName);
+        Upgrade upgrade = GameManager.Instance.UpgradeManager.upgrades.Find(x => x.upgradeName == upgradeName);
 
         if (upgrade != null)
         {

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class WaveController : MonoBehaviour
+public class WaveManager : MonoBehaviour
 {
     [System.Serializable] 
     public class Wave
@@ -53,13 +53,13 @@ public class WaveController : MonoBehaviour
 
         if (currentWave == 11)
         {
-            SpawnManager.Instance.SpawnBoss(bossSpawner);
+            GameManager.Instance.SpawnManager.SpawnBoss(bossSpawner);
         }
         
         for (int i = 0; i < wave.CoyoteCount; i++)
         {
             GameObject randomSpawner = spawners[Random.Range(0, spawners.Length)];
-            SpawnManager.Instance.SpawnCoyote(randomSpawner);
+            GameManager.Instance.SpawnManager.SpawnCoyote(randomSpawner);
         }
 
     }

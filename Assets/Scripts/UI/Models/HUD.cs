@@ -11,7 +11,7 @@ public class HUD : MonoBehaviour
         hudUI.UpdateHealth(cowboy.Stats["health"], cowboy.Stats["maxHealth"]);
         
         GameManager.OnGoldChanged += hudUI.UpdateGold;
-        hudUI.UpdateGold(ScoreManager.Instance.GetGold());
+        hudUI.UpdateGold(GameManager.Instance.ScoreManager.GetGold());
 
         GameManager.OnCatKidnappedChanged += hudUI.UpdateKidnapCounter;
     }
