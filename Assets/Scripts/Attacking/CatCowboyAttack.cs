@@ -8,23 +8,23 @@ public class CatCowboyAttack : BaseAttack
     protected override float FireRate => 1f;
     protected override float Range => 0f;
     protected override float BulletSpeed => 4f;
-    private Transform target;
+    private Transform _target;
 
 
     void Start()
     {
-        target = GetCoyoteInSight();
+        _target = GetCoyoteInSight();
     }
     
     protected override void Update()
     {
         base.Update();
 
-        target = GetCoyoteInSight();
+        _target = GetCoyoteInSight();
 
-        if (target != null)
+        if (_target != null)
         {
-            TryShoot(target.gameObject);
+            TryShoot(_target.gameObject);
         }
     }
     

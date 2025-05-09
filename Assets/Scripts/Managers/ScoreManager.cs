@@ -7,9 +7,9 @@ public class ScoreManager : MonoBehaviour
     
     [SerializeField] private int gold;
     [SerializeField] private int catKidnapLimit = 3;
-    private int catsKidnapped;
-    private bool limitReached;
-    private int currentWave;
+    private int _catsKidnapped;
+    private bool _limitReached;
+    private int _currentWave;
     
 
     void Awake()
@@ -39,7 +39,7 @@ public class ScoreManager : MonoBehaviour
 
     private void AddGold()
     {
-        int bonus = currentWave * 2;
+        int bonus = _currentWave * 2;
         gold += bonus;
         
         GameManager.OnGoldChanged?.Invoke(gold);
@@ -63,12 +63,12 @@ public class ScoreManager : MonoBehaviour
     
     public void OnCatKidnapped()
     {
-        catsKidnapped++;
-        GameManager.OnCatKidnappedChanged?.Invoke(catsKidnapped,catKidnapLimit);
+        _catsKidnapped++;
+        GameManager.OnCatKidnappedChanged?.Invoke(_catsKidnapped,catKidnapLimit);
 
-        if (catsKidnapped >= catKidnapLimit)
+        if (_catsKidnapped >= catKidnapLimit)
         {
-            limitReached = true;
+            _limitReached = true;
             GameManager.OnLostGame?.Invoke();
         }
         
@@ -76,6 +76,6 @@ public class ScoreManager : MonoBehaviour
     
     private void GetWave(int waveNumber)
     {
-        currentWave = waveNumber;
+        _currentWave = waveNumber;
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CoyoteAttack : BaseAttack
 {
+    private const string IsAttacking = "isAttacking";
     
     protected override float FireRate => 1f;
     protected override float Range => 3f;
@@ -17,7 +18,7 @@ public class CoyoteAttack : BaseAttack
 
     public override void TryShoot(GameObject target)
     {
-        _animator.SetBool("isAttacking", true);
+        _animator.SetBool(IsAttacking, true);
         
         if (fireCooldown > 0f) return;
 
@@ -31,7 +32,7 @@ public class CoyoteAttack : BaseAttack
 
     public void EndCoyoteAttack()
     {
-        _animator.SetBool("isAttacking", false);
+        _animator.SetBool(IsAttacking, false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)

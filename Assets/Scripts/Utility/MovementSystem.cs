@@ -3,46 +3,46 @@ using UnityEngine.InputSystem;
 
 public class MovementSystem : MonoBehaviour
 {
-    private Cowboy cowboy;
-    private Rigidbody2D rb;
-    private Vector2 moveInput;
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    private Cowboy _cowboy;
+    private Rigidbody2D _rb;
+    private Vector2 _moveInput;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
     
     void Start()
     {
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
-        cowboy = GetComponent<Cowboy>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _rb = GetComponent<Rigidbody2D>();
+        _cowboy = GetComponent<Cowboy>();
     }
     
     void Update()
     {
-        rb.linearVelocity = moveInput * cowboy.Stats["walkingSpeed"];
+        _rb.linearVelocity = _moveInput * _cowboy.Stats["walkingSpeed"];
         
-        if (moveInput.x < -0.01f) {
-            spriteRenderer.flipX = true;
-        } else if (moveInput.x > 0.01f) {
-            spriteRenderer.flipX = false;
+        if (_moveInput.x < -0.01f) {
+            _spriteRenderer.flipX = true;
+        } else if (_moveInput.x > 0.01f) {
+            _spriteRenderer.flipX = false;
         }
 
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        animator.SetBool("isWalking", true);
+        _animator.SetBool("isWalking", true);
 
         if (context.canceled)
         {
-            animator.SetBool("isWalking", false);
-            animator.SetFloat("LastInputX", moveInput.x);
-            animator.SetFloat("LastInputY", moveInput.y);
+            _animator.SetBool("isWalking", false);
+            _animator.SetFloat("LastInputX", _moveInput.x);
+            _animator.SetFloat("LastInputY", _moveInput.y);
         }
         
-        moveInput = context.ReadValue<Vector2>();
-        animator.SetFloat("InputX", moveInput.x);
-        animator.SetFloat("InputY", moveInput.y);
+        _moveInput = context.ReadValue<Vector2>();
+        _animator.SetFloat("InputX", _moveInput.x);
+        _animator.SetFloat("InputY", _moveInput.y);
     }
 
 }

@@ -29,7 +29,6 @@ public class StateManager : MonoBehaviour
         currentState = GameState.Menu;
         Debug.Log($"Initial game state set to: {currentState}");
         GameManager.OnStateChanged?.Invoke(currentState);
-
         GameManager.OnGameStarted += OnStartedGameplay;
         GameManager.OnStartAgainClicked += OnStartAgain;
         GameManager.OnLostGame += HandleLostGame;

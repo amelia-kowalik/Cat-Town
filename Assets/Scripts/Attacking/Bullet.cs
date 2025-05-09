@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private int damage;
-    private GameObject owner;
+    private int _damage;
+    private GameObject _owner;
 
     public void Init(int damageValue, GameObject bulletOwner)
     {
-        damage = damageValue;
-        owner = bulletOwner;
+        _damage = damageValue;
+        _owner = bulletOwner;
         
     }
     
     private void OnCollisionEnter2D(Collision2D other)
     {
 
-        if (other.gameObject == owner)
+        if (other.gameObject == _owner)
         {
             return;
         }
@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
             Cowboy player = other.gameObject.GetComponent<Cowboy>();
             if (player != null)
             {
-                player.TakeDamage(damage);
+                player.TakeDamage(_damage);
             }
         }
         
@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
             Coyote enemy = other.gameObject.GetComponent<Coyote>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(_damage);
                 Debug.Log("Bullet hit an Enemy.");
             }
         }

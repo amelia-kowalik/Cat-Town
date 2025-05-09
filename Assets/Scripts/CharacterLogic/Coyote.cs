@@ -5,6 +5,11 @@ using Random = UnityEngine.Random;
 
 public class Coyote : MonoBehaviour
 {
+    private const string IsWalking = "isWalking";
+    private const string Hurt = "Hurt";
+    private const string MoveX = "MoveX";
+    private const string MoveY = "MoveY";
+    
     [SerializeField] private int health = 30;
     [SerializeField] private int baseDamage = 10;
     private Animator _animator;
@@ -25,20 +30,20 @@ public class Coyote : MonoBehaviour
     
         Vector2 velocity = _agent.velocity;
         float speed = velocity.magnitude;
-        _animator.SetBool("isWalking", speed > 0.05f);
+        _animator.SetBool(IsWalking, speed > 0.05f);
 
         if (speed > 0.05f)
         {
             Vector2 moveDirection = velocity.normalized;
             _lastMoveDirection = moveDirection;
             
-            _animator.SetFloat("MoveX", _lastMoveDirection.x);
-            _animator.SetFloat("MoveY", _lastMoveDirection.y);
+            _animator.SetFloat(MoveX, _lastMoveDirection.x);
+            _animator.SetFloat(MoveY, _lastMoveDirection.y);
         }
         else
         {
-            _animator.SetFloat("moveX", _lastMoveDirection.x);
-            _animator.SetFloat("moveY", _lastMoveDirection.y);
+            _animator.SetFloat(MoveX, _lastMoveDirection.x);
+            _animator.SetFloat(MoveY, _lastMoveDirection.y);
         }
         
         if (_agent.velocity.x < -0.1f)
@@ -53,7 +58,7 @@ public class Coyote : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        _animator.SetTrigger("Hurt");
+        _animator.SetTrigger(Hurt);
         health -= damage;
 
         if (health <= 0)

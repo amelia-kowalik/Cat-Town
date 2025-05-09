@@ -7,9 +7,9 @@ public class WaveController : MonoBehaviour
     [System.Serializable] 
     public class Wave
     {
-        [field: SerializeField] public GameObject[] spawners { get; private set; }
-        [field: SerializeField] public int coyoteCount { get; private set; } 
-        [field: SerializeField] public float timeBeforeSpawn { get; private set; }
+        [field: SerializeField] public GameObject[] Spawners { get; private set; }
+        [field: SerializeField] public int CoyoteCount { get; private set; } 
+        [field: SerializeField] public float TimeBeforeSpawn { get; private set; }
     }
 
     [SerializeField] private Wave[] waves;
@@ -21,7 +21,7 @@ public class WaveController : MonoBehaviour
 
     private void Awake()
     {
-         _timeBetweenWaves = waves[currentWave].timeBeforeSpawn;
+         _timeBetweenWaves = waves[currentWave].TimeBeforeSpawn;
     }
     
     private void Update()
@@ -37,14 +37,14 @@ public class WaveController : MonoBehaviour
             StartWave();
             NextWave();
             
-            _timeBetweenWaves = Time.time + waves[currentWave].timeBeforeSpawn;
+            _timeBetweenWaves = Time.time + waves[currentWave].TimeBeforeSpawn;
         }
     }
 
     void StartWave()
     {
         Wave wave = waves[currentWave];
-        GameObject[] spawners = wave.spawners;
+        GameObject[] spawners = wave.Spawners;
 
         if (spawners.Length == 0)
         {
@@ -56,7 +56,7 @@ public class WaveController : MonoBehaviour
             SpawnManager.Instance.SpawnBoss(bossSpawner);
         }
         
-        for (int i = 0; i < wave.coyoteCount; i++)
+        for (int i = 0; i < wave.CoyoteCount; i++)
         {
             GameObject randomSpawner = spawners[Random.Range(0, spawners.Length)];
             SpawnManager.Instance.SpawnCoyote(randomSpawner);

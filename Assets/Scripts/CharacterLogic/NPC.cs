@@ -4,6 +4,12 @@ using UnityEngine.AI;
 
 public class NPC : MonoBehaviour
 {
+    private const string IsWalking = "isWalking";
+    private const string MoveX = "MoveX";
+    private const string MoveY = "MoveY";
+    private const string Punch = "Punch";
+    private const string IsDead = "isDead";
+    
     private int _lives = 1;
     private Animator _animator;
     private NavMeshAgent _agent;
@@ -23,20 +29,20 @@ public class NPC : MonoBehaviour
         
         Vector2 velocity = _agent.velocity;
         float speed = velocity.magnitude;
-        _animator.SetBool("isWalking", speed > 0.05f);
+        _animator.SetBool(IsWalking, speed > 0.05f);
 
         if (speed > 0.05f)
         {
             Vector2 moveDirection = velocity.normalized;
             _lastMoveDirection = moveDirection;
             
-            _animator.SetFloat("MoveX", _lastMoveDirection.x);
-            _animator.SetFloat("MoveY", _lastMoveDirection.y);
+            _animator.SetFloat(MoveX, _lastMoveDirection.x);
+            _animator.SetFloat(MoveY, _lastMoveDirection.y);
         }
         else
         {
-            _animator.SetFloat("moveX", _lastMoveDirection.x);
-            _animator.SetFloat("moveY", _lastMoveDirection.y);
+            _animator.SetFloat(MoveX, _lastMoveDirection.x);
+            _animator.SetFloat(MoveY, _lastMoveDirection.y);
         }
         
         if (_agent.velocity.x < -0.1f)
@@ -56,7 +62,7 @@ public class NPC : MonoBehaviour
     
     private void PunchCoyote(GameObject other)
     {
-        _animator.SetTrigger("Punch");
+        _animator.SetTrigger(Punch);
         Coyote coyote = other.GetComponent<Coyote>();
         Debug.Log("Cat punched a coyote");
         coyote.TakeDamage(10);
@@ -73,7 +79,7 @@ public class NPC : MonoBehaviour
             }
             else
             {
-                _animator.SetBool("isDead", true);
+                _animator.SetBool(IsDead, true);
                 Destroy(gameObject); 
             }
         }

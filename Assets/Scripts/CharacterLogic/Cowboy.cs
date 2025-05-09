@@ -6,7 +6,12 @@ using Random = UnityEngine.Random;
 
 public class Cowboy : MonoBehaviour
 {
-    
+    private const string Health = "health";
+    private const string MaxHealth = "maxHealth";
+    private const string WalkingSpeed = "walkingSpeed";
+    private const string BaseDamage = "baseDamage";
+    private const string IsDead = "isDead";
+    private const string Hurt = "Hurt";
 
     public Dictionary<string,float> Stats { get; set; }
     [SerializeField, ReadOnly] private float currentHealth;
@@ -27,12 +32,12 @@ public class Cowboy : MonoBehaviour
     {
         Stats = new Dictionary<string, float>()
         {
-            { "health", 100f },
-            { "maxHealth", 100f },
-            { "walkingSpeed", 2f },
-            { "baseDamage", 10f }
+            { Health, 100f },
+            { MaxHealth, 100f },
+            { WalkingSpeed, 2f },
+            { BaseDamage, 10f }
         };
-        currentHealth = Stats["health"];
+        currentHealth = Stats[Health];
     }
 
     public void ApplyUpgrade(Upgrade upgrade)
@@ -46,21 +51,21 @@ public class Cowboy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        animator.SetTrigger("Hurt");
+        animator.SetTrigger(Hurt);
         
-        Stats["health"] -= damage;
-        GameManager.OnHealthChanged?.Invoke(Stats["health"], Stats["maxHealth"]);
+        Stats[Health] -= damage;
+        GameManager.OnHealthChanged?.Invoke(Stats[Health], Stats[MaxHealth]);
         
-        if (Stats["health"] <= 0)
+        if (Stats[Health] <= 0)
         {
-            animator.SetBool("isDead", true);
+            animator.SetBool(IsDead, true);
         }
     }
 
     public void Heal(int heal)
     {
-        Stats["health"] = Mathf.Min(Stats["health"] + heal, Stats["maxHealth"]);
-        GameManager.OnHealthChanged?.Invoke(Stats["health"], Stats["maxHealth"]);
+        Stats[Health] = Mathf.Min(Stats[Health] + heal, Stats[MaxHealth]);
+        GameManager.OnHealthChanged?.Invoke(Stats[Health], Stats[MaxHealth]);
     }
 
     public void CowboyDeath()

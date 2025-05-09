@@ -11,9 +11,9 @@ public class Expert : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
     
-    public void TakeDamage(int damage)
+    public void TakeDamage(int takenDamage)
     {
-        health -= damage;
+        health -= takenDamage;
 
         if (health <= 0)
         {

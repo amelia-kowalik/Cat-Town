@@ -83404,12 +83404,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690218124}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.630975, y: 4.2913723, z: 0.37906212}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1768956598}
+  m_Father: {fileID: 1853171001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &690218126
 MonoBehaviour:
@@ -101673,78 +101673,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - <spawners>k__BackingField:
-    - {fileID: 740122892}
-    <coyoteCount>k__BackingField: 3
-    <timeBeforeSpawn>k__BackingField: 5
-  - <spawners>k__BackingField:
-    - {fileID: 740122892}
-    - {fileID: 942457486}
-    <coyoteCount>k__BackingField: 4
-    <timeBeforeSpawn>k__BackingField: 15
-  - <spawners>k__BackingField:
-    - {fileID: 740122892}
-    - {fileID: 942457486}
+  - <Spawners>k__BackingField:
     - {fileID: 1651312590}
-    <coyoteCount>k__BackingField: 5
-    <timeBeforeSpawn>k__BackingField: 30
-  - <spawners>k__BackingField:
+    <CoyoteCount>k__BackingField: 3
+    <TimeBeforeSpawn>k__BackingField: 5
+  - <Spawners>k__BackingField:
     - {fileID: 740122892}
     - {fileID: 942457486}
-    - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 3
+    <TimeBeforeSpawn>k__BackingField: 15
+  - <Spawners>k__BackingField:
     - {fileID: 1942183563}
-    <coyoteCount>k__BackingField: 7
-    <timeBeforeSpawn>k__BackingField: 30
-  - <spawners>k__BackingField:
+    - {fileID: 1942183563}
+    - {fileID: 942457486}
+    - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 6
+    <TimeBeforeSpawn>k__BackingField: 15
+  - <Spawners>k__BackingField:
+    - {fileID: 1942183563}
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 9
+    <TimeBeforeSpawn>k__BackingField: 20
+  - <Spawners>k__BackingField:
     - {fileID: 1942183563}
-    <coyoteCount>k__BackingField: 9
-    <timeBeforeSpawn>k__BackingField: 30
-  - <spawners>k__BackingField:
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 12
+    <TimeBeforeSpawn>k__BackingField: 20
+  - <Spawners>k__BackingField:
     - {fileID: 1942183563}
-    <coyoteCount>k__BackingField: 11
-    <timeBeforeSpawn>k__BackingField: 60
-  - <spawners>k__BackingField:
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 15
+    <TimeBeforeSpawn>k__BackingField: 25
+  - <Spawners>k__BackingField:
     - {fileID: 1942183563}
-    <coyoteCount>k__BackingField: 14
-    <timeBeforeSpawn>k__BackingField: 60
-  - <spawners>k__BackingField:
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 16
+    <TimeBeforeSpawn>k__BackingField: 30
+  - <Spawners>k__BackingField:
     - {fileID: 1942183563}
-    <coyoteCount>k__BackingField: 17
-    <timeBeforeSpawn>k__BackingField: 60
-  - <spawners>k__BackingField:
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 17
+    <TimeBeforeSpawn>k__BackingField: 30
+  - <Spawners>k__BackingField:
     - {fileID: 1942183563}
-    <coyoteCount>k__BackingField: 20
-    <timeBeforeSpawn>k__BackingField: 90
-  - <spawners>k__BackingField:
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 18
+    <TimeBeforeSpawn>k__BackingField: 40
+  - <Spawners>k__BackingField:
     - {fileID: 1942183563}
-    <coyoteCount>k__BackingField: 24
-    <timeBeforeSpawn>k__BackingField: 90
-  - <spawners>k__BackingField:
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
+    <CoyoteCount>k__BackingField: 19
+    <TimeBeforeSpawn>k__BackingField: 50
+  - <Spawners>k__BackingField:
     - {fileID: 1942183563}
+    - {fileID: 942457486}
+    - {fileID: 1651312590}
     - {fileID: 878760564}
-    <coyoteCount>k__BackingField: 24
-    <timeBeforeSpawn>k__BackingField: 90
+    <CoyoteCount>k__BackingField: 20
+    <TimeBeforeSpawn>k__BackingField: 60
   bossSpawner: {fileID: 878760564}
   currentWave: 0
 --- !u!4 &1768956598
@@ -101765,7 +101765,6 @@ Transform:
   - {fileID: 942457487}
   - {fileID: 1651312591}
   - {fileID: 878760565}
-  - {fileID: 690218125}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770189963
@@ -102597,6 +102596,7 @@ Transform:
   - {fileID: 1274746125}
   - {fileID: 713573075}
   - {fileID: 1827781356}
+  - {fileID: 690218125}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861843496

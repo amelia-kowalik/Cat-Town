@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class CowboyAttack : MonoBehaviour
 {
+    private const string IsAttacking = "isAttacking";
+    private const string LastInputX = "LastInputX";
+    private const string LastInputY = "LastInputY";
+
+    
     [SerializeField] public GameObject bulletPrefab;
     public float bulletSpeed = 5f;
     public float timeToDestroy = 2f;
@@ -31,9 +36,9 @@ public class CowboyAttack : MonoBehaviour
     
     public void Shoot()
     {
-        animator.SetBool("isAttacking", true);
-        animator.SetFloat("LastInputX", facingDirection.x);
-        animator.SetFloat("LastInputY", facingDirection.y);
+        animator.SetBool(IsAttacking, true);
+        animator.SetFloat(LastInputX, facingDirection.x);
+        animator.SetFloat(LastInputY, facingDirection.y);
         
         Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y) + facingDirection * 0.5f;
         GameObject spawnedBullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
@@ -53,6 +58,6 @@ public class CowboyAttack : MonoBehaviour
 
     public void EndAttack()
     {
-        animator.SetBool("isAttacking", false);
+        animator.SetBool(IsAttacking, false);
     }
 }
