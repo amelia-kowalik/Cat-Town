@@ -11,12 +11,14 @@ public class CowboyAttack : MonoBehaviour
     [SerializeField] public GameObject bulletPrefab;
     public float bulletSpeed = 5f;
     public float timeToDestroy = 2f;
-    private Vector2 facingDirection;
-    private Animator animator;
+    private Vector2 _facingDirection;
+    private Animator _animator;
+    private CharacterSFXManager _sfxManager;
 
     void Start()
-    {
-        animator = GetComponent<Animator>();
+    {  
+        _sfxManager = GetComponent<CharacterSFXManager>();
+        _animator = GetComponent<Animator>();
     }
     
     void Update()
@@ -24,7 +26,7 @@ public class CowboyAttack : MonoBehaviour
         Vector2 movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         if (movementInput != Vector2.zero)
         {
-            facingDirection = movementInput.normalized;
+            _facingDirection = movementInput.normalized;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -36,13 +38,14 @@ public class CowboyAttack : MonoBehaviour
     
     public void Shoot()
     {
-        animator.SetBool(IsAttacking, true);
-        animator.SetFloat(LastInputX, facingDirection.x);
-        animator.SetFloat(LastInputY, facingDirection.y);
+        _animator.SetBool(IsAttacking, true);
+        _animator.SetFloat(LastInputX, _facingDirection.x);
+        _animator.SetFloat(LastInputY, _facingDirection.y);
+        _sfxManager.PlaySound(0);
         
-        Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y) + facingDirection * 0.5f;
+        Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y) + _facingDirection * 0.5f;
         GameObject spawnedBullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
-        Vector2 bulletDirection = facingDirection * bulletSpeed;
+        Vector2 bulletDirection = _facingDirection * bulletSpeed;
             
         spawnedBullet.GetComponent<Rigidbody2D>().AddForce(bulletDirection, ForceMode2D.Impulse);
             
@@ -58,6 +61,6 @@ public class CowboyAttack : MonoBehaviour
 
     public void EndAttack()
     {
-        animator.SetBool(IsAttacking, false);
+        _animator.SetBool(IsAttacking, false);
     }
 }

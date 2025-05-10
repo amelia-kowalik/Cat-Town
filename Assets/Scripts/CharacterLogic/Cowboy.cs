@@ -15,11 +15,12 @@ public class Cowboy : MonoBehaviour
 
     public Dictionary<string,float> Stats { get; set; }
     [SerializeField, ReadOnly] private float currentHealth;
-    private Animator animator;
+    private Animator _animator;
+    private CharacterSFXManager _sfxManager;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
         GameManager.OnFoodBought += Heal;
     }
     
@@ -51,14 +52,14 @@ public class Cowboy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        animator.SetTrigger(Hurt);
+        _animator.SetTrigger(Hurt);
         
         Stats[Health] -= damage;
         GameManager.OnHealthChanged?.Invoke(Stats[Health], Stats[MaxHealth]);
         
         if (Stats[Health] <= 0)
         {
-            animator.SetBool(IsDead, true);
+            _animator.SetBool(IsDead, true);
         }
     }
 

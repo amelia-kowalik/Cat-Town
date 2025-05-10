@@ -28,6 +28,8 @@ public class
     [SerializeField] private UIManager uiManager;
     [SerializeField] private UpgradeManager upgradeManager;
     [SerializeField] private WaveManager waveManager;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private CharacterSFXManager sfxManager;
     
     public ScoreManager ScoreManager => scoreManager;
     public HealthManager HealthManager => healthManager;
@@ -36,6 +38,8 @@ public class
     public UIManager UIManager => uiManager;
     public UpgradeManager UpgradeManager => upgradeManager;
     public WaveManager WaveManager => waveManager;
+    public AudioManager AudioManager => audioManager;
+    public CharacterSFXManager SFXManager => sfxManager;
 
     private bool bossDefeated = false;
     
