@@ -102960,43 +102960,9 @@ MonoBehaviour:
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
-    <CoyoteCount>k__BackingField: 15
-    <TimeBeforeSpawn>k__BackingField: 25
-  - <Spawners>k__BackingField:
-    - {fileID: 1942183563}
-    - {fileID: 740122892}
-    - {fileID: 942457486}
-    - {fileID: 1651312590}
-    <CoyoteCount>k__BackingField: 16
-    <TimeBeforeSpawn>k__BackingField: 30
-  - <Spawners>k__BackingField:
-    - {fileID: 1942183563}
-    - {fileID: 740122892}
-    - {fileID: 942457486}
-    - {fileID: 1651312590}
-    <CoyoteCount>k__BackingField: 17
-    <TimeBeforeSpawn>k__BackingField: 30
-  - <Spawners>k__BackingField:
-    - {fileID: 1942183563}
-    - {fileID: 740122892}
-    - {fileID: 942457486}
-    - {fileID: 1651312590}
-    <CoyoteCount>k__BackingField: 18
-    <TimeBeforeSpawn>k__BackingField: 40
-  - <Spawners>k__BackingField:
-    - {fileID: 1942183563}
-    - {fileID: 740122892}
-    - {fileID: 942457486}
-    - {fileID: 1651312590}
-    <CoyoteCount>k__BackingField: 19
-    <TimeBeforeSpawn>k__BackingField: 50
-  - <Spawners>k__BackingField:
-    - {fileID: 1942183563}
-    - {fileID: 942457486}
-    - {fileID: 1651312590}
     - {fileID: 878760564}
-    <CoyoteCount>k__BackingField: 20
-    <TimeBeforeSpawn>k__BackingField: 60
+    <CoyoteCount>k__BackingField: 15
+    <TimeBeforeSpawn>k__BackingField: 30
   bossSpawner: {fileID: 878760564}
   currentWave: 0
 --- !u!4 &1768956598
