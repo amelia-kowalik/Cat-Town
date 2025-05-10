@@ -5,7 +5,7 @@ public class AudioManager : MonoBehaviour
 {
     [Header( "Audio Sources" )]
     [SerializeField] private AudioSource musicSource;
-    [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource uiSource;
     [Header( "Audio Clips" )]
     [SerializeField] private AudioClip menuBackground;
     [SerializeField] private AudioClip gameBackground;
@@ -93,4 +93,5 @@ public class AudioManager : MonoBehaviour
             musicSource.Play();
         }
     }
+    
 }
