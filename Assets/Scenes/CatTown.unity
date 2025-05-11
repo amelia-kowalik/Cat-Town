@@ -1501,6 +1501,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 102179822}
+        m_TargetAssemblyTypeName: CowboyAttack, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1da966fb-3aa0-4299-a864-16e7ec732a41
+    m_ActionName: 'Player/Shoot[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1570,7 +1586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776aac3b48f6c2a48942371ffcf06ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
 --- !u!82 &102179824
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2881,7 +2896,7 @@ Transform:
   m_GameObject: {fileID: 194292622}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.71, y: -0.22, z: 0}
+  m_LocalPosition: {x: -4.01, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75514,12 +75529,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267166774}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.137323, y: 11.81231, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.427486, y: 39.82864, z: 0}
+  m_LocalScale: {x: 3.7882576, y: 3.7882576, z: 3.7882576}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1957111408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &274260014
 GameObject:
@@ -92736,7 +92751,7 @@ Transform:
   m_GameObject: {fileID: 1041707630}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.31, y: -3.7099996, z: 0}
+  m_LocalPosition: {x: -9.31, y: -3.39, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95538,7 +95553,7 @@ Transform:
   m_GameObject: {fileID: 1232250669}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4, y: -0.88, z: 0}
+  m_LocalPosition: {x: -5.38, y: 1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102906,7 +102921,7 @@ GameObject:
   - component: {fileID: 1768956598}
   - component: {fileID: 1768956597}
   m_Layer: 0
-  m_Name: WaveController
+  m_Name: WaveManager
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -102947,22 +102962,22 @@ MonoBehaviour:
     - {fileID: 942457486}
     - {fileID: 1651312590}
     <CoyoteCount>k__BackingField: 9
-    <TimeBeforeSpawn>k__BackingField: 20
+    <TimeBeforeSpawn>k__BackingField: 30
   - <Spawners>k__BackingField:
     - {fileID: 1942183563}
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
-    <CoyoteCount>k__BackingField: 12
-    <TimeBeforeSpawn>k__BackingField: 20
+    <CoyoteCount>k__BackingField: 11
+    <TimeBeforeSpawn>k__BackingField: 50
   - <Spawners>k__BackingField:
     - {fileID: 1942183563}
     - {fileID: 740122892}
     - {fileID: 942457486}
     - {fileID: 1651312590}
     - {fileID: 878760564}
-    <CoyoteCount>k__BackingField: 15
-    <TimeBeforeSpawn>k__BackingField: 30
+    <CoyoteCount>k__BackingField: 12
+    <TimeBeforeSpawn>k__BackingField: 55
   bossSpawner: {fileID: 878760564}
   currentWave: 0
 --- !u!4 &1768956598
@@ -102973,8 +102988,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768956596}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.5, y: 13.46, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.630975, y: 4.2913723, z: 0.37906212}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -102983,7 +102998,7 @@ Transform:
   - {fileID: 942457487}
   - {fileID: 1651312591}
   - {fileID: 878760565}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1853171001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770189963
 GameObject:
@@ -103816,6 +103831,7 @@ Transform:
   - {fileID: 1827781356}
   - {fileID: 690218125}
   - {fileID: 477972828}
+  - {fileID: 1768956598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861843496
@@ -104637,7 +104653,7 @@ GameObject:
   - component: {fileID: 1957111408}
   - component: {fileID: 1957111407}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: MapGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104675,6 +104691,7 @@ Transform:
   - {fileID: 1736483946}
   - {fileID: 353921119}
   - {fileID: 1281032731}
+  - {fileID: 267166776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972787529
@@ -106693,7 +106710,7 @@ Transform:
   m_GameObject: {fileID: 2142699859}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.94, y: 0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106706,8 +106723,7 @@ SceneRoots:
   - {fileID: 1787654559}
   - {fileID: 1214384613}
   - {fileID: 1957111408}
-  - {fileID: 267166776}
-  - {fileID: 1768956598}
+  - {fileID: 809833708}
   - {fileID: 1100220433}
   - {fileID: 1723948963}
   - {fileID: 194812899}
@@ -106719,5 +106735,4 @@ SceneRoots:
   - {fileID: 276079928}
   - {fileID: 818718323}
   - {fileID: 1853171001}
-  - {fileID: 809833708}
   - {fileID: 104189656}

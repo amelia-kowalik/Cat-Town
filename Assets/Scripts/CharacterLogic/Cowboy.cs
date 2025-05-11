@@ -13,23 +13,22 @@ public class Cowboy : MonoBehaviour
     private const string IsDead = "isDead";
     private const string Hurt = "Hurt";
 
-    public Dictionary<string,float> Stats { get; set; }
-    [SerializeField, ReadOnly] private float currentHealth;
+    public Dictionary<string,float> Stats { get; private set; }
     private Animator _animator;
     private CharacterSFXManager _sfxManager;
 
-    private void Start()
+    void Start()
     {
         _animator = GetComponent<Animator>();
         GameManager.OnFoodBought += Heal;
     }
     
-    private void OnDestroy()
+    void OnDestroy()
     {
         GameManager.OnFoodBought -= Heal;
     }
 
-    public void Awake()
+    void Awake()
     {
         Stats = new Dictionary<string, float>()
         {
@@ -38,19 +37,10 @@ public class Cowboy : MonoBehaviour
             { WalkingSpeed, 2f },
             { BaseDamage, 10f }
         };
-        currentHealth = Stats[Health];
-    }
-
-    public void ApplyUpgrade(Upgrade upgrade)
-    {
-        if (upgrade.appliedTo == "Cowboy" && Stats.ContainsKey(upgrade.stat))
-        {
-            Stats[upgrade.stat] += upgrade.Amount;
-        }
     }
     
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         _animator.SetTrigger(Hurt);
         
@@ -61,6 +51,17 @@ public class Cowboy : MonoBehaviour
         {
             _animator.SetBool(IsDead, true);
         }
+    }
+    
+    public int GetDamage()
+    {
+        int randomDamage = Random.Range(10, 50);
+        if (randomDamage == 50)
+        {
+            Debug.Log("Critical Hit!!!");
+        }
+
+        return randomDamage;
     }
 
     public void Heal(int heal)
@@ -74,16 +75,7 @@ public class Cowboy : MonoBehaviour
         GameManager.OnLostGame?.Invoke();
     }
 
-    public int GetDamage()
-    {
-        int randomDamage = Random.Range(10, 50);
-        if (randomDamage == 50)
-        {
-            Debug.Log("Critical Hit!!!");
-        }
-
-        return randomDamage;
-    }
+    
     
     
     

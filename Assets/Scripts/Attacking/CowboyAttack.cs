@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CowboyAttack : MonoBehaviour
 {
@@ -28,15 +29,9 @@ public class CowboyAttack : MonoBehaviour
         {
             _facingDirection = movementInput.normalized;
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            Shoot();
-        }
     }
     
-    public void Shoot()
+    private void TryShoot()
     {
         _animator.SetBool(IsAttacking, true);
         _animator.SetFloat(LastInputX, _facingDirection.x);
@@ -59,6 +54,12 @@ public class CowboyAttack : MonoBehaviour
         Destroy(spawnedBullet, timeToDestroy);
     }
 
+    public void Shoot(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        TryShoot();
+    }
+    
     public void EndAttack()
     {
         _animator.SetBool(IsAttacking, false);
