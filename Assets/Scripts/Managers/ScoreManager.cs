@@ -5,21 +5,21 @@ public class ScoreManager : MonoBehaviour
 {
     
     [SerializeField] private int gold;
-    [SerializeField] private int catKidnapLimit = 3;
-    private int _catsKidnapped;
+    [SerializeField] private int catsTakenLimit = 3;
+    private int _catsTaken;
     private int _currentWave;
     
     
     void Start()
     {
-        GameManager.OnCatKidnapped += OnCatKidnapped;
+        GameManager.OnCatTaken += CountTakenCats;
         GameManager.OnCoyoteDeath += AddGold;
         GameManager.OnNextWave += GetWave;
     }
 
     void OnDestroy()
     {
-        GameManager.OnCatKidnapped -= OnCatKidnapped;
+        GameManager.OnCatTaken -= CountTakenCats;
         GameManager.OnCoyoteDeath -= AddGold;
         GameManager.OnNextWave -= GetWave;
     }
@@ -43,18 +43,14 @@ public class ScoreManager : MonoBehaviour
         }
         return false;
     }
-
-    public int GetGold()
-    {
-        return gold;
-    }
     
-    public void OnCatKidnapped()
+    
+    public void CountTakenCats()
     {
-        _catsKidnapped++;
-        GameManager.OnCatKidnappedChanged?.Invoke(_catsKidnapped,catKidnapLimit);
+        _catsTaken++;
+        GameManager.OnCatsTakenChanged?.Invoke(_catsTaken,catsTakenLimit);
 
-        if (_catsKidnapped >= catKidnapLimit)
+        if (_catsTaken >= catsTakenLimit)
         {
             GameManager.OnLostGame?.Invoke();
         }
@@ -64,5 +60,10 @@ public class ScoreManager : MonoBehaviour
     private void GetWave(int waveNumber)
     {
         _currentWave = waveNumber;
+    }
+    
+    public int GetGold()
+    {
+        return gold;
     }
 }

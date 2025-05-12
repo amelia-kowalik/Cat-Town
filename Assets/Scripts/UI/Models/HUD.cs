@@ -13,12 +13,12 @@ public class HUD : MonoBehaviour
         GameManager.OnGoldChanged += hudUI.UpdateGold;
         hudUI.UpdateGold(GameManager.Instance.ScoreManager.GetGold());
 
-        GameManager.OnCatKidnappedChanged += hudUI.UpdateKidnapCounter;
+        GameManager.OnCatsTakenChanged += hudUI.UpdateKidnapCounter;
     }
 
     void OnDestroy()
     {
         GameManager.OnGoldChanged -= hudUI.UpdateGold;
-        GameManager.OnCatKidnappedChanged -= hudUI.UpdateKidnapCounter;
+        GameManager.OnCatsTakenChanged -= hudUI.UpdateKidnapCounter;
     }
 }

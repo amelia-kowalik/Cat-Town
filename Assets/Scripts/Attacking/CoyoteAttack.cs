@@ -39,15 +39,15 @@ public class CoyoteAttack : BaseAttack
     {
         if (other.gameObject.CompareTag("NPC"))
         {
-            KidnapCat(other.gameObject);
+            TakeCat(other.gameObject);
         }
     }
 
-    public void KidnapCat(GameObject npc)
+    public void TakeCat(GameObject npc)
     {
         Debug.Log("Kidnapped Cat");
         npc.SetActive(false);
-        GameManager.OnCatKidnapped?.Invoke();
+        GameManager.OnCatTaken?.Invoke();
     }
 
 }

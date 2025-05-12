@@ -6,14 +6,14 @@ public class
     GameManager : MonoBehaviour
 {
     public static Action<float, float> OnHealthChanged;
-    public static Action OnCatKidnapped;
+    public static Action OnCatTaken;
     public static Action OnCoyoteDeath;
     public static Action OnBossDeath;
     public static Action OnLostGame;
     public static Action OnWonGame;
     public static Action<int> OnGoldChanged;
     public static Action<int> OnNextWave;
-    public static Action<int,int> OnCatKidnappedChanged;
+    public static Action<int,int> OnCatsTakenChanged;
     public static Action OnGameStarted;
     public static Action OnGameOver;
     public static Action OnStartAgainClicked;
