@@ -7,7 +7,6 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int gold;
     [SerializeField] private int catKidnapLimit = 3;
     private int _catsKidnapped;
-    private bool _limitReached;
     private int _currentWave;
     
     
@@ -57,7 +56,6 @@ public class ScoreManager : MonoBehaviour
 
         if (_catsKidnapped >= catKidnapLimit)
         {
-            _limitReached = true;
             GameManager.OnLostGame?.Invoke();
         }
         

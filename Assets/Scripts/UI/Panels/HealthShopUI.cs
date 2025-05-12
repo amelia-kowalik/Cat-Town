@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HealthShopUI : MonoBehaviour
 {
-    [SerializeField] private FoodItem[] foodItems;
+    [SerializeField] private HealthItem[] foodItems;
     [SerializeField] private GameObject shopPanel;
 
     private void Start()
@@ -13,7 +13,7 @@ public class HealthShopUI : MonoBehaviour
 
     public void Init()
     {
-        foreach (FoodItem item in foodItems)
+        foreach (HealthItem item in foodItems)
         {
             item.UpdateUI();
         }

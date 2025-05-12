@@ -17,17 +17,6 @@ public class Cowboy : MonoBehaviour
     private Animator _animator;
     private CharacterSFXManager _sfxManager;
 
-    void Start()
-    {
-        _animator = GetComponent<Animator>();
-        GameManager.OnFoodBought += Heal;
-    }
-    
-    void OnDestroy()
-    {
-        GameManager.OnFoodBought -= Heal;
-    }
-
     void Awake()
     {
         Stats = new Dictionary<string, float>()

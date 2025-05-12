@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class 
     GameManager : MonoBehaviour
@@ -12,7 +13,6 @@ public class
     public static Action OnWonGame;
     public static Action<int> OnGoldChanged;
     public static Action<int> OnNextWave;
-    public static Action<int> OnFoodBought;
     public static Action<int,int> OnCatKidnappedChanged;
     public static Action OnGameStarted;
     public static Action OnGameOver;
@@ -22,7 +22,7 @@ public class
     public static GameManager Instance { get; private set; }
     
     [SerializeField] private ScoreManager scoreManager;
-    [SerializeField] private HealthManager healthManager;
+    [FormerlySerializedAs("hpManager")] [SerializeField] private HealthManager healthManager;
     [SerializeField] private SpawnManager spawnManager;
     [SerializeField] private StateManager stateManager;
     [SerializeField] private UIManager uiManager;

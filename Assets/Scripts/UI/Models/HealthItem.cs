@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FoodItem : MonoBehaviour
+public class HealthItem : MonoBehaviour
 {
     [SerializeField] private string foodName;
     [SerializeField] private int healthAdded; 
