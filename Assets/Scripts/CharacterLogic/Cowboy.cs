@@ -15,8 +15,7 @@ public class Cowboy : MonoBehaviour
 
     public Dictionary<string,float> Stats { get; private set; }
     private Animator _animator;
-    private CharacterSFXManager _sfxManager;
-
+    
     void Awake()
     {
         Stats = new Dictionary<string, float>()
@@ -26,6 +25,8 @@ public class Cowboy : MonoBehaviour
             { WalkingSpeed, 2f },
             { BaseDamage, 10f }
         };
+        
+        _animator = GetComponent<Animator>();
     }
     
 

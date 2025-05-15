@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     private int _catsTaken;
     private int _currentWave;
     
-    
+    public int GetGold() { return gold; }
     void Start()
     {
         GameManager.OnCatTaken += CountTakenCats;
@@ -23,7 +23,7 @@ public class ScoreManager : MonoBehaviour
         GameManager.OnCoyoteDeath -= AddGold;
         GameManager.OnNextWave -= GetWave;
     }
-
+    
 
     private void AddGold()
     {
@@ -45,7 +45,7 @@ public class ScoreManager : MonoBehaviour
     }
     
     
-    public void CountTakenCats()
+    private void CountTakenCats()
     {
         _catsTaken++;
         GameManager.OnCatsTakenChanged?.Invoke(_catsTaken,catsTakenLimit);
@@ -62,8 +62,5 @@ public class ScoreManager : MonoBehaviour
         _currentWave = waveNumber;
     }
     
-    public int GetGold()
-    {
-        return gold;
-    }
+    
 }

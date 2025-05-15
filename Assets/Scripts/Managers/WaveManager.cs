@@ -51,7 +51,7 @@ public class WaveManager : MonoBehaviour
             return;
         }
 
-        if (currentWave == waves.Length - 1)
+        if (currentWave == 0)
         {
             GameManager.Instance.SpawnManager.SpawnBoss(bossSpawner);
         }

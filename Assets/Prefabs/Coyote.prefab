@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   baseDamage: 10
+  maxDamage: 12
 --- !u!114 &-7594756386412310312
 MonoBehaviour:
   m_ObjectHideFlags: 0

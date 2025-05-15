@@ -96851,7 +96851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 100
-  catKidnapLimit: 3
+  catsTakenLimit: 3
 --- !u!4 &1324564501
 Transform:
   m_ObjectHideFlags: 0
@@ -102941,9 +102941,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - <Spawners>k__BackingField:
+    - {fileID: 878760564}
+    <CoyoteCount>k__BackingField: 1
+    <TimeBeforeSpawn>k__BackingField: 5
+  - <Spawners>k__BackingField:
+    - {fileID: 878760564}
+    <CoyoteCount>k__BackingField: 12
+    <TimeBeforeSpawn>k__BackingField: 55
+  - <Spawners>k__BackingField:
     - {fileID: 1651312590}
     <CoyoteCount>k__BackingField: 3
-    <TimeBeforeSpawn>k__BackingField: 5
+    <TimeBeforeSpawn>k__BackingField: 55
   - <Spawners>k__BackingField:
     - {fileID: 740122892}
     - {fileID: 942457486}

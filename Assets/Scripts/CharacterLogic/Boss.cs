@@ -3,7 +3,9 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     [SerializeField] private int health = 100;
-    [SerializeField] private int baseDamage = 40;
+    [SerializeField] private int baseDamage = 20;
+    [SerializeField] private int maxDamage = 40;
+
 
     public void TakeDamage(int damage)
     {
@@ -24,7 +26,7 @@ public class Boss : MonoBehaviour
 
     public int GetDamage()
     {
-        int randomDamage = Random.Range(baseDamage, 60);
+        int randomDamage = Random.Range(baseDamage, maxDamage);
         return randomDamage;
     }
     

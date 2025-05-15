@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5199730177313393823}
   - component: {fileID: -4708371732761150493}
   - component: {fileID: 5383689477640353359}
+  - component: {fileID: -3299564359308846022}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.85, y: 13.67, z: 0.012901574}
-  m_LocalScale: {x: 3.1327293, y: 3.1327293, z: 3.1327293}
+  m_LocalScale: {x: 0.9528143, y: 0.9528143, z: 0.9528143}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,8 +128,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03410235, y: -0.031307936}
-  m_Size: {x: 0.21996547, y: 0.2702848}
+  m_Offset: {x: 0.23303443, y: -0.39601648}
+  m_Size: {x: 1.3969799, y: 1.3969799}
   m_Direction: 0
 --- !u!50 &1017590974020868650
 Rigidbody2D:
@@ -169,10 +170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Graph: {fileID: -1314861676483237869, guid: 63acc03d6cf9f3f468b13ecbc1163d9f, type: 2}
+  m_Graph: {fileID: 1905706278172989381, guid: 79254bddd0bbec948b9cd7c40394c6e5, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 5909937217737851043
-  - rid: 5909937217737851044
+  - rid: 7776702064689676426
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -186,14 +187,14 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 3765683275362547645}
-    - rid: 5909937217737851044
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 7776702064689676426
+      type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 13833040999733504801
-          m_Value1: 13822403932286854638
-        Name: Target
-        m_Value: {fileID: 0}
+          m_Value0: 3299747791531502747
+          m_Value1: 13191099905203739218
+        Name: Tag
+        m_Value: Player
 --- !u!114 &5199730177313393823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  baseDamage: 40
+  baseDamage: 20
 --- !u!195 &5383689477640353359
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -243,3 +244,25 @@ NavMeshAgent:
   m_BaseOffset: 0.18
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &-3299564359308846022
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765683275362547645}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

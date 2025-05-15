@@ -47,7 +47,7 @@ public class UpgradeManager : MonoBehaviour
     ApplyAllStatUpgrades();
     }
 
-    public void ApplyStatUpgrade(Upgrade upgrade)
+    private void ApplyStatUpgrade(Upgrade upgrade)
     {
         if (upgrade.appliedTo == Cowboy && cowboy.Stats.ContainsKey(upgrade.stat))
         {
@@ -62,18 +62,18 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    public void ApplyAllStatUpgrades()
+    private void ApplyAllStatUpgrades()
     {
         foreach (var upgrade in upgrades)
         {
-            if (upgrade.appliedTo == Cowboy && upgrade.currentLevel > 0)
+            if (upgrade.appliedTo == Cowboy)
             {
                 ApplyStatUpgrade(upgrade);
             }
         }
     }
 
-    public void LevelUpUpgrade(string upgradeName)
+    private void LevelUpUpgrade(string upgradeName)
     {
         Upgrade upgradeToLevelUp = null;
         
@@ -150,7 +150,6 @@ public class UpgradeManager : MonoBehaviour
     private void UnlockExpert()
     {
         Upgrade expertUpgrade = upgrades.Find(x => x.upgradeName == Expert);
-        
         
         expert.SetActive(true);
     }
