@@ -19,7 +19,7 @@ public class StateManager : MonoBehaviour
     }
     private Dictionary<GameState, List<GameState>> stateTransitions = new()
     {
-        {GameState.Menu, new List<GameState>() { GameState.Gameplay }},
+        { GameState.Menu, new List<GameState>() { GameState.Gameplay }},
         { GameState.Gameplay , new List<GameState>() { GameState.Pause, GameState.Gameover, GameState.Victory}},
         { GameState.Pause, new List<GameState>() { GameState.Gameplay }},
         { GameState.Gameover, new List<GameState>() { GameState.Menu }},

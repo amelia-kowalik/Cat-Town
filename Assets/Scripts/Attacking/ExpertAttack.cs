@@ -13,7 +13,6 @@ public class ExpertAttack : BaseAttack
         if (fireCooldown > 0f) return;
 
         Vector2 direction = (target.transform.position - transform.position).normalized;
-        facingDirection = direction;
 
         FireBullet(direction, GetComponent<Expert>().GetDamage());
         fireCooldown = 1f / FireRate;

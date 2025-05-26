@@ -5,19 +5,18 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "ShootPlayer", story: "[Self] attacks [Player]", category: "Action", id: "f016db31cfda83aebab05ab4b2806914")]
+[NodeDescription(name: "ShootPlayer", story: "[Self] attacks player", category: "Action", id: "f016db31cfda83aebab05ab4b2806914")]
 public partial class ShootPlayerAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Self;
-    [SerializeReference] public GameObject player;
-
+    private GameObject _player; 
     private CoyoteAttack _coyoteAttack;
     private BossAttack _bossAttack;
     
     protected override Status OnStart()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
+        _player = GameObject.FindGameObjectWithTag("Player");
+        if (_player == null)
         {
             LogFailure("No agent assigned.");
             return Status.Failure;
@@ -37,29 +36,27 @@ public partial class ShootPlayerAction : Action
 
     protected override Status OnUpdate()
     {
-        if (Self.Value == null || player == null)
+        if (Self.Value == null || _player == null)
         {
             return Status.Failure;
         }
 
         if (_coyoteAttack != null)
         {
-            if (_coyoteAttack.InRange(player) && _coyoteAttack.InSight(player))
+            if (_coyoteAttack.InRange(_player) && _coyoteAttack.InSight(_player))
             {
-                _coyoteAttack.TryShoot(player);
+                _coyoteAttack.TryShoot(_player);
             }
         }
         else if (_bossAttack != null)
         {
-            if (_bossAttack.InRange(player) && _bossAttack.InSight(player))
+            if (_bossAttack.InRange(_player) && _bossAttack.InSight(_player))
             {
-                _bossAttack.TryShoot(player);
+                _bossAttack.TryShoot(_player);
             }
         }
         
         return Status.Running;
     }
-
-    
 }
 

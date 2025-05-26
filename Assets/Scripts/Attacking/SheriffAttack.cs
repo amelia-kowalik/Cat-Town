@@ -21,7 +21,6 @@ public class SheriffAttack : BaseAttack
         if (fireCooldown > 0f) return;
 
         Vector2 direction = (target.transform.position - transform.position).normalized;
-        facingDirection = direction;
 
         FireBullet(direction, GetComponent<Sheriff>().GetDamage());
         fireCooldown = 1f / FireRate;

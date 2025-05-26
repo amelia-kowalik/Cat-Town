@@ -7,19 +7,11 @@ public abstract class BaseAttack : MonoBehaviour
     protected abstract float BulletSpeed { get; }
     [SerializeField] protected GameObject bulletPrefab;
     protected float fireCooldown = 0f;
-    protected Vector2 facingDirection;
 
     protected virtual void Update()
     {
         fireCooldown -= Time.deltaTime;
         
-        float moveOnX = Input.GetAxisRaw("Horizontal");
-        float moveOnY = Input.GetAxisRaw("Vertical");
-
-        if (moveOnX != 0 || moveOnY != 0)
-        {
-            facingDirection = new Vector2(moveOnX, moveOnY).normalized;
-        }
     }
     
     public bool InRange(GameObject target)

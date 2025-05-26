@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   baseDamage: 20
+  maxDamage: 40
 --- !u!195 &5383689477640353359
 NavMeshAgent:
   m_ObjectHideFlags: 0

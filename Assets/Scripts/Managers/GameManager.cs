@@ -21,15 +21,15 @@ public class
     
     public static GameManager Instance { get; private set; }
     
-    [SerializeField] private ScoreManager scoreManager;
-    [FormerlySerializedAs("hpManager")] [SerializeField] private HealthManager healthManager;
+    [SerializeField] private ScoreManager scoreManager; 
+    [SerializeField] private HealthManager healthManager;
     [SerializeField] private SpawnManager spawnManager;
     [SerializeField] private StateManager stateManager;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private UpgradeManager upgradeManager;
     [SerializeField] private WaveManager waveManager;
     [SerializeField] private AudioManager audioManager;
-    [SerializeField] private CharacterSFXManager sfxManager;
+   
     
     public ScoreManager ScoreManager => scoreManager;
     public HealthManager HealthManager => healthManager;
@@ -39,9 +39,9 @@ public class
     public UpgradeManager UpgradeManager => upgradeManager;
     public WaveManager WaveManager => waveManager;
     public AudioManager AudioManager => audioManager;
-    public CharacterSFXManager SFXManager => sfxManager;
+    
 
-    private bool bossDefeated = false;
+    private bool _bossDefeated = false;
     
     void Awake()
     {
@@ -57,19 +57,19 @@ public class
     private void Start()
     {
         OnNextWave += CheckWin;
-        OnBossDeath += () => bossDefeated = true;
+        OnBossDeath += () => _bossDefeated = true;
     }
 
     private void OnDestroy()
     {
         OnNextWave -= CheckWin;
-        OnBossDeath -= () => bossDefeated = true;
+        OnBossDeath -= () => _bossDefeated = true;
     }
 
     private void CheckWin(int currentWave)
     {
         bool allCoyotesDefeated = FindObjectsOfType<Coyote>().Length == 0;
-        if (currentWave == 10 && bossDefeated && allCoyotesDefeated )
+        if (currentWave == 10 && _bossDefeated && allCoyotesDefeated )
         {
             HandleWin();
         }
