@@ -1,5 +1,7 @@
 # Cat Town – Game Design Document
 
+Gameplay Video: https://youtu.be/17R56h7CO7U
+
 ## 1. General Information
 - **Title:** Cat Town  
 - **Genre:** Strategy, Tower Defense  
